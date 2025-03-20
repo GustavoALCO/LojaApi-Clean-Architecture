@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>loja_api.ioc</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="8.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\loja-api.application\loja-api.application.csproj" />
+    <ProjectReference Include="..\loja-api.domain\loja-api.domain.csproj" />
+    <ProjectReference Include="..\loja-api.infra\loja-api.infra.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "loja-api.application/1.0.0": {
+        "dependencies": {
+          "loja-api.domain": "1.0.0"
+        },
+        "runtime": {
+          "loja-api.application.dll": {}
+        }
+      },
+      "loja-api.domain/1.0.0": {
+        "runtime": {
+          "loja-api.domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "loja-api.application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "loja-api.domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

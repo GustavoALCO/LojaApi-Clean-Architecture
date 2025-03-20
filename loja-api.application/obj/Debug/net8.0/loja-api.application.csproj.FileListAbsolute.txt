@@ -1,0 +1,15 @@
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.application\bin\Debug\net8.0\loja-api.application.deps.json
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.application\bin\Debug\net8.0\loja-api.application.dll
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.application\bin\Debug\net8.0\loja-api.application.pdb
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.application\bin\Debug\net8.0\loja-api.domain.dll
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.application\bin\Debug\net8.0\loja-api.domain.pdb
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.application\obj\Debug\net8.0\loja-api.application.csproj.AssemblyReference.cache
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.application\obj\Debug\net8.0\loja-api.application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.application\obj\Debug\net8.0\loja-api.application.AssemblyInfoInputs.cache
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.application\obj\Debug\net8.0\loja-api.application.AssemblyInfo.cs
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.application\obj\Debug\net8.0\loja-api.application.csproj.CoreCompileInputs.cache
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.application\obj\Debug\net8.0\loja-api.F599DA5C.Up2Date
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.application\obj\Debug\net8.0\loja-api.application.dll
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.application\obj\Debug\net8.0\refint\loja-api.application.dll
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.application\obj\Debug\net8.0\loja-api.application.pdb
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.application\obj\Debug\net8.0\ref\loja-api.application.dll
