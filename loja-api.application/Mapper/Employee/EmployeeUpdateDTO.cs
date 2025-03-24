@@ -1,0 +1,20 @@
+﻿namespace loja_api.application.Mapper.Employee;
+
+internal class EmployeeUpdateDTO
+{
+    public int Id { get; set; }
+
+    public string FullName { get; set; }
+
+    public string Login { get; set; }
+
+    public string Password { get; set; }
+
+    public string Position { get; set; }
+
+    public bool IsActive { get; set; }
+
+    public int UpdatebyId { get; set; }
+
+    public DateTime UpdateDate { get; set; }
+}

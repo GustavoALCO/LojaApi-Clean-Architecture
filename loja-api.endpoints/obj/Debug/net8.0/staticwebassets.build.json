@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "lsB5EBW30K3S+f01PqZ/FHtS8GcJp7aAp3UXzT39JCQ=",
+  "Source": "loja-api.endpoints",
+  "BasePath": "_content/loja-api.endpoints",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

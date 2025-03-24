@@ -9,3 +9,4 @@ C:\Users\alves\Downloads\projeto8Semestre\loja-api.domain\obj\Debug\net8.0\loja-
 C:\Users\alves\Downloads\projeto8Semestre\loja-api.domain\obj\Debug\net8.0\refint\loja-api.domain.dll
 C:\Users\alves\Downloads\projeto8Semestre\loja-api.domain\obj\Debug\net8.0\loja-api.domain.pdb
 C:\Users\alves\Downloads\projeto8Semestre\loja-api.domain\obj\Debug\net8.0\ref\loja-api.domain.dll
+C:\Users\alves\Downloads\projeto8Semestre\loja-api.domain\obj\Debug\net8.0\loja-api.domain.sourcelink.json

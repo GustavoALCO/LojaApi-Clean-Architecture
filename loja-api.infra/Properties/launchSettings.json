@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Perfil 1": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\alves\\Downloads\\Projeto8semestre\\Loja-api.endpoints\\Loja-api.endpoints.csproj"
+    }
+  }
+}
