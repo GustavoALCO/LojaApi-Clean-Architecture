@@ -1,7 +1,6 @@
 # Loja De Ferramentas
 
-- Este projeto tem como base fazer uma api para uma loja de ferramentas onde utilizara o Mercado Pago para realizar as transaçoes.
-Atualmente, o projeto está estruturado como um monólito para acelerar o desenvolvimento.
+- Este projeto é uma API para uma loja de ferramentas, com integração ao Mercado Pago para processamento de transações. A arquitetura adotada é o Domain-Driven Design (DDD), que busca organizar o código em torno do domínio do negócio, garantindo um design mais flexível e focado na solução dos problemas específicos da loja de ferramentas.
 
 ## Ferramentas Utilizadas
 
