@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("loja-api.ioc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94e087face69b944226952784dc6b37ad9fdc4c4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa048abe8089053bdb44df9384b49dcd8f0b223e")]
 [assembly: System.Reflection.AssemblyProductAttribute("loja-api.ioc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("loja-api.ioc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
