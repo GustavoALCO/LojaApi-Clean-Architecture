@@ -58,6 +58,14 @@
               "target": "Package",
               "version": "[14.0.0, )"
             },
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.24.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.14, )"
@@ -267,6 +275,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.application\\loja-api.application.csproj": {
+                "projectPath": "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.application\\loja-api.application.csproj"
+              },
               "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.domain\\loja-api.domain.csproj": {
                 "projectPath": "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.domain\\loja-api.domain.csproj"
               }
@@ -298,7 +309,7 @@
               "target": "Package",
               "version": "[8.0.14, )"
             },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.14, )"
             },
@@ -391,9 +402,9 @@
               "target": "Package",
               "version": "[8.0.14, )"
             },
-            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.14, )"
+              "version": "[9.0.3, )"
             },
             "Swashbuckle.AspNetCore.SwaggerGen": {
               "target": "Package",

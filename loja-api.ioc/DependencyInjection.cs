@@ -4,7 +4,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using loja_api.application.Interfaces;
+using loja_api.application.Interfaces.Auxiliar;
+using System.Reflection;
+using loja_api.domain.Interfaces.products;
+using loja_api.infra.Repositories.Product;
 using loja_api.application.Services;
 
 namespace loja_api.ioc;
@@ -15,17 +18,8 @@ public static class DependencyInjection
     {
         services.AddDbContext<ContextDB>(o =>
         {
-            o.UseSqlite(configuration.GetConnectionString("BdConnection"),
+            o.UseSqlServer(configuration.GetConnectionString("DBString"),
                 m => m.MigrationsAssembly(typeof(ContextDB).Assembly.FullName));
-        });
-
-        // Necessário para a criação de migrações no ambiente de design
-        services.AddScoped<DbContextOptions<ContextDB>>(provider =>
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<ContextDB>();
-            optionsBuilder.UseSqlite(configuration.GetConnectionString("BdConnection"),
-                m => m.MigrationsAssembly(typeof(ContextDB).Assembly.FullName));
-            return optionsBuilder.Options;
         });
 
         return services;
@@ -81,10 +75,30 @@ public static class DependencyInjection
         services.AddScoped<IMercadoPagoService, MercadoPagoService>();
         services.AddScoped<IJwtService, JwtService>();
         services.AddScoped<IHashService, HashService>();
-        services.AddScoped(typeof(IGenericService<,>), typeof(GenericService<,>));
+        services.AddScoped<IImageService, ImageService>();
 
         return services;
     }//Declara Todos os Services
 
+    public static IServiceCollection AddMediator(this IServiceCollection services)
+    {
+        services.AddMediatR(ctg => ctg.RegisterServicesFromAssembly(Assembly.Load("loja-api.application")));
 
+        return services;
+    }
+
+    public static IServiceCollection AddMapper(this IServiceCollection services)
+    {
+        services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+        return services;
+    }
+
+    public static IServiceCollection AddInterfaces(this IServiceCollection services)
+    {
+        services.AddScoped<IProductsQueryRepository, ProductsRepositoryQueries>();
+        services.AddScoped<IProductsRepositoryCommands, ProductsRepositoryCommands>();
+
+        return services;    
+    }
 }

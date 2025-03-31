@@ -1,20 +1,29 @@
-﻿namespace loja_api.application.Mapper.Product;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace loja_api.application.Mapper.Product;
 
 public class ProductsCreateDTO
 {
     public Guid IdProducts { get; set; }
 
+    [Required]
     public string ProductName { get; set; }
 
+    [Required]
     public string ProductDescription { get; set; }
 
     public string CodeProduct { get; set; }
 
+    [Required]
     public string TypeProduct { get; set; }
 
+    [Required]
     public double Price { get; set; }
 
-    public int CreatebyId { get; set; }
+    public List<string> Images { get; set; }
 
-    public DateTime CreateDate { get; set; }
+    public int UserCreate {  get; set; }
+
+    public DateTime DateCreate { get; set; }
+
 }

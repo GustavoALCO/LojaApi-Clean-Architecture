@@ -14,7 +14,7 @@ public class ProductsUpdateDTO
 
     public double Price { get; set; }
 
-    public int UpdatebyId { get; set; }
+    public int UserUpdate { get; set; }
 
-    public DateTime UpdateDate { get; set; }
+    public DateTime DateUpdate { get; set; }
 }

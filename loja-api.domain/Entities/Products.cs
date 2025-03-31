@@ -18,6 +18,8 @@ public class Products
 
     public double Price { get; set; }
 
+    public List<string> Images { get; set; }
+
     public int QuantityStorage { get; set; }
 
     public List<ProductsPaymant> ProductsPaymant { get; set; }

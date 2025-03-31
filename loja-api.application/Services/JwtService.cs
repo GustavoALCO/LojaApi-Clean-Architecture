@@ -4,7 +4,8 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using loja_api.application.Models;
-using loja_api.application.Interfaces;
+using loja_api.application.Interfaces.Auxiliar;
+using Microsoft.Extensions.Options;
 
 namespace loja_api.application.Services;
 
@@ -12,9 +13,9 @@ public class JwtService : IJwtService
 {
     private readonly JwtSettings _configuration;
 
-    public JwtService(JwtSettings configuration)
+    public JwtService(IOptions<JwtSettings> configuration)
     {
-        _configuration = configuration;
+        _configuration = configuration.Value;
         //configuração para acessar informaçoes do appsetings
     }
 

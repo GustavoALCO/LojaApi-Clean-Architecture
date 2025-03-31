@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using loja_api.application.Mapper.Product;
+using loja_api.application.Services;
 using loja_api.domain.Entities;
 using loja_api.domain.Entities.auxiliar;
 
@@ -11,30 +12,17 @@ public class ProductsProfile : Profile
     {
         CreateMap<Products, ProductsDTO>().ReverseMap();
 
+        CreateMap<Products, ProductsFilterDTO>().ReverseMap();
+
         CreateMap<Products, ProductsCreateDTO>()
-                    // Mapeia as propriedades de "Auditable" diretamente para "ProductsDTO" 
-                    .ForMember(dest => dest.CreateDate, opt => opt.MapFrom(src => src.Auditable.CreateDate))
-                    .ForMember(dest => dest.CreatebyId, opt => opt.MapFrom(src => src.Auditable.CreatebyId))
-                    .ReverseMap()
-                    //recria um objeto "Auditable"
-                    .ForMember(dest => dest.Auditable, opt => opt.MapFrom(src => new Auditable
-                    {
-                        CreateDate = src.CreateDate,
-                        CreatebyId = src.CreatebyId,
-                    }));
+            .ForMember(dest => dest.DateCreate, opt => opt.MapFrom(src => src.Auditable.CreateDate))
+            .ForMember(dest => dest.UserCreate, opt => opt.MapFrom(src => src.Auditable.CreatebyId))
+            .ReverseMap();
 
         CreateMap<Products, ProductsUpdateDTO>()
-                    // Mapeia as propriedades de "Auditable" diretamente para "ProductsDTO" 
-                    .ForMember(dest => dest.UpdateDate, opt => opt.MapFrom(src => src.Auditable.UpdateDate))
-                    .ForMember(dest => dest.UpdatebyId, opt => opt.MapFrom(src => src.Auditable.UpdatebyId))
-                    .ReverseMap()
-                    //recria um objeto "Auditable"
-                    .ForMember(dest => dest.Auditable, opt => opt.MapFrom(src => new Auditable
-                    {
-                        UpdateDate = src.UpdateDate,
-                        UpdatebyId = src.UpdatebyId,
-                    })).ForAllMembers(opt => opt.Condition((src, dest, srcMember) => srcMember != null));
-
-
+    .ForMember(dest => dest.DateUpdate, opt => opt.MapFrom(src => src.Auditable.UpdateDate))
+    .ForMember(dest => dest.UserUpdate, opt => opt.MapFrom(src => src.Auditable.UpdatebyId))
+    .ReverseMap()
+    .ForAllMembers(opt => opt.Condition((src, dest, srcMember) => MappperNotNull.IsValidValue(srcMember)));
     }
 }

@@ -1,4 +1,4 @@
-﻿using loja_api.application.Interfaces;
+﻿using loja_api.application.Interfaces.Auxiliar;
 using Microsoft.AspNetCore.Identity;
 
 namespace loja_api.application.Services;

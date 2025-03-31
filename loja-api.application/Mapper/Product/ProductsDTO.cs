@@ -16,7 +16,7 @@ public class ProductsDTO
 
     public double Price { get; set; }
 
-    public int QuantityStorage { get; set; }
+    public List<string> Images { get; set; }
 
     public Auditable Auditable { get; set; }
 }

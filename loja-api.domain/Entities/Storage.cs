@@ -14,6 +14,7 @@ public class Storage
     public int Quantity { get; set; }
 
     public double PriceBuy { get; set; }
+
     public bool IsValid { get; set; }
 
     public Products Products { get; set; }

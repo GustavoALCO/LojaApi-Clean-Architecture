@@ -17,7 +17,7 @@ C:\Users\alves\Downloads\projeto8Semestre\loja-api.ioc\obj\Debug\net8.0\loja-api
 C:\Users\alves\Downloads\projeto8Semestre\loja-api.ioc\obj\Debug\net8.0\refint\loja-api.ioc.dll
 C:\Users\alves\Downloads\projeto8Semestre\loja-api.ioc\obj\Debug\net8.0\loja-api.ioc.pdb
 C:\Users\alves\Downloads\projeto8Semestre\loja-api.ioc\obj\Debug\net8.0\ref\loja-api.ioc.dll
-C:\Users\alves\Downloads\projeto8Semestre\loja-api.ioc\bin\Debug\net8.0\appsettings.json
 C:\Users\alves\Downloads\projeto8Semestre\loja-api.ioc\bin\Debug\net8.0\loja-api.ioc.runtimeconfig.json
 C:\Users\alves\Downloads\projeto8Semestre\loja-api.ioc\obj\Debug\net8.0\loja-api.ioc.sourcelink.json
 C:\Users\alves\Downloads\projeto8Semestre\loja-api.ioc\obj\Debug\net8.0\loja-api.ioc.genruntimeconfig.cache
+C:\Users\alves\Downloads\Projeto8semestre\loja-api.ioc\bin\Debug\net8.0\appsettings.json

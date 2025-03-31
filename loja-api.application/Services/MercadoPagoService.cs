@@ -1,6 +1,7 @@
-﻿using loja_api.application.Interfaces;
+﻿using loja_api.application.Interfaces.Auxiliar;
 using loja_api.application.Mapper.Paymant;
 using loja_api.application.Mapper.User;
+using loja_api.domain.Entities;
 using MercadoPago.Client.Preference;
 using MercadoPago.Resource.Preference;
 
@@ -8,7 +9,7 @@ namespace loja_api.application.Services;
 
 public class MercadoPagoService : IMercadoPagoService
 {
-    public async Task<Preference> CreatePaymantAsync(PaymantDTO marketCartDTO, UserDTO user)
+    public async Task<Preference> CreatePaymantAsync(PaymantDTO PaymantDTO, UserDTO user)
     {
         var request = new PreferenceRequest
         {
@@ -19,9 +20,9 @@ public class MercadoPagoService : IMercadoPagoService
         {
             Id = Guid.NewGuid().ToString(),
             Title = "Finalizando Compra No Loja-Peças",
-            Quantity = marketCartDTO.ProductsMarket.Count,
+            Quantity = PaymantDTO.ProductsMarket.Count,
             CurrencyId = "BRL",
-            UnitPrice = ((decimal)marketCartDTO.Price),
+            UnitPrice = (decimal)PaymantDTO.Price,
         },
 
     },
@@ -41,7 +42,7 @@ public class MercadoPagoService : IMercadoPagoService
         return preference;
     }
 
-    public async Task<Preference> CreatePaymantSandBoxAsync(PaymantDTO marketCartDTO, UserDTO user)
+    public async Task<Preference> CreatePaymantSandBoxAsync(PaymantDTO PaymantDTO, UserDTO user)
     {
         var request = new PreferenceRequest
         {
@@ -53,7 +54,7 @@ public class MercadoPagoService : IMercadoPagoService
             Title = "Finalizando Compra No Loja-Peças",
             Quantity = 10,
             CurrencyId = "BRL",
-            UnitPrice = ((decimal)marketCartDTO.Price),
+            UnitPrice = (decimal)PaymantDTO.Price,
         },
 
     },
