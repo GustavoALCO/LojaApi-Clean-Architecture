@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\alves\\Downloads\\Projeto8semestre\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2FA88B83-2266-446E-834B-4772433A876D}|loja-api.endpoints\\loja-api.endpoints.csproj|c:\\users\\alves\\downloads\\projeto8semestre\\loja-api.endpoints\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2FA88B83-2266-446E-834B-4772433A876D}|loja-api.endpoints\\loja-api.endpoints.csproj|solutionrelative:loja-api.endpoints\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2FA88B83-2266-446E-834B-4772433A876D}|loja-api.endpoints\\loja-api.endpoints.csproj|c:\\users\\alves\\downloads\\projeto8semestre\\loja-api.endpoints\\controlers\\productcontrolers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FA88B83-2266-446E-834B-4772433A876D}|loja-api.endpoints\\loja-api.endpoints.csproj|solutionrelative:loja-api.endpoints\\controlers\\productcontrolers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,6 +27,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.endpoints\\appsettings.json",
+              "RelativeDocumentMoniker": "loja-api.endpoints\\appsettings.json",
+              "ToolTip": "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.endpoints\\appsettings.json",
+              "RelativeToolTip": "loja-api.endpoints\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-31T22:37:42.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ProductControlers.cs",
               "DocumentMoniker": "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.endpoints\\Controlers\\ProductControlers.cs",
               "RelativeDocumentMoniker": "loja-api.endpoints\\Controlers\\ProductControlers.cs",
