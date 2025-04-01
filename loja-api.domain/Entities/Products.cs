@@ -24,7 +24,7 @@ public class Products
 
     public List<ProductsPaymant> ProductsPaymant { get; set; }
 
-    public ICollection<Storage> Storages { get; set; }
+    public ICollection<Storages> Storages { get; set; }
 
     public Auditable Auditable { get; set; }
 }

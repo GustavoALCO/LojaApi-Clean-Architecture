@@ -32,11 +32,8 @@ public class CreateProductsHandler : IRequestHandler<CreateProductsCommands, boo
         //Adiciona a data que foi o produto foi criado
         product.Auditable.CreateDate = DateTime.UtcNow;
 
-        //mapeia os dados de ProductsDTO para Products
-        var products = _mapper.Map<Products>(product);
-
         //Adiciona no banco de dados
-        await _productsRepositoryCommands.CreateProductsAsync(products);
+        await _productsRepositoryCommands.CreateProductsAsync(product);
 
         //Retorna no modelo de ProductsDTO para mostrar apenas o Necessario para o front
         return true;

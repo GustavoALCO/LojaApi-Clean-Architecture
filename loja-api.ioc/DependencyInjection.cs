@@ -9,6 +9,9 @@ using System.Reflection;
 using loja_api.domain.Interfaces.products;
 using loja_api.infra.Repositories.Product;
 using loja_api.application.Services;
+using loja_api.domain.Interfaces.Storage;
+using loja_api.infra.Repositories.Storages;
+using loja_api.infra.Repositories.Storage;
 
 namespace loja_api.ioc;
 
@@ -98,6 +101,8 @@ public static class DependencyInjection
     {
         services.AddScoped<IProductsQueryRepository, ProductsRepositoryQueries>();
         services.AddScoped<IProductsRepositoryCommands, ProductsRepositoryCommands>();
+        services.AddScoped<IStorageRepositoryCommands, StorageRepositoryCommands>();
+        services.AddScoped<IStorageRepositoryQueries, StorageRepositoryQueries>();
 
         return services;    
     }

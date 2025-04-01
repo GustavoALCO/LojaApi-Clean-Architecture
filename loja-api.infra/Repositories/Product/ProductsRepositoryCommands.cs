@@ -36,7 +36,7 @@ public class ProductsRepositoryCommands : IProductsRepositoryCommands
 
     public async Task UpdateProductsAsync(Products productsUpdate)
     {
-        var product = _DBProducts.Update(productsUpdate);
+        _DBProducts.Update(productsUpdate);
 
         await _DB.SaveChangesAsync();
     }

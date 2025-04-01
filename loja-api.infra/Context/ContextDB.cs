@@ -13,7 +13,7 @@ public class ContextDB : DbContext
     public DbSet<Cupom> Cupom { get; set; }
     public DbSet<Employee> Employee { get; set; }
     public DbSet<Products> Products { get; set; }
-    public DbSet<Storage> Storage { get; set; }
+    public DbSet<Storages> Storage { get; set; }
     public DbSet<Paymant> Paymant { get; set; }
     //para fazer a chamada do banco de dados
 
@@ -57,13 +57,13 @@ public class ContextDB : DbContext
             .HasForeignKey(mp => mp.IdProducts);
 
         // Configuração de Storage e Products
-        modelBuilder.Entity<Storage>()
+        modelBuilder.Entity<Storages>()
             .HasOne(s => s.Products)
             .WithMany(p => p.Storages)
             .HasForeignKey(s => s.IdProducts);
 
         // Configuração de Auditable no Storage
-        modelBuilder.Entity<Storage>()
+        modelBuilder.Entity<Storages>()
             .OwnsOne(s => s.Auditable);
 
         modelBuilder.Entity<Paymant>()

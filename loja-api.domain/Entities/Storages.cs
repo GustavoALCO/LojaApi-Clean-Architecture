@@ -1,10 +1,9 @@
 ﻿using loja_api.domain.Entities.auxiliar;
 using System.ComponentModel.DataAnnotations;
-using System.Security.AccessControl;
 
 namespace loja_api.domain.Entities;
 
-public class Storage
+public class Storages
 {
     [Key]
     public Guid IdStorage { get; set; }

@@ -10,9 +10,9 @@ public class StorageProfile : Profile
     public StorageProfile()
     {
 
-        CreateMap<Storage, StorageDTO>().ReverseMap();
+        CreateMap<Storages, StorageDTO>().ReverseMap();
 
-        CreateMap<Storage, StorageCreateDTO>()
+        CreateMap<Storages, StorageCreateDTO>()
                     // Mapeia as propriedades de "Auditable" diretamente para "StorageDTO" 
                     .ForMember(dest => dest.CreateDate, opt => opt.MapFrom(src => src.Auditable.CreateDate))
                     .ForMember(dest => dest.CreatebyId, opt => opt.MapFrom(src => src.Auditable.CreatebyId))
@@ -24,7 +24,7 @@ public class StorageProfile : Profile
                         CreatebyId = src.CreatebyId,
                     }));
 
-        CreateMap<Storage, StorageUpdateDTO>()
+        CreateMap<Storages, StorageUpdateDTO>()
             .ForMember(dest => dest.UpdateDate, opt => opt.MapFrom(src => src.Auditable.UpdateDate))
             .ForMember(dest => dest.UpdatebyId, opt => opt.MapFrom(src => src.Auditable.UpdatebyId))
             // Ignora valores nulos
