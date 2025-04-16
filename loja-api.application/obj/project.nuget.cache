@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hnsyFXgKU0c=",
+  "dgSpecHash": "7kK3tYyyIeU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.application\\loja-api.application.csproj",
+  "projectFilePath": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\loja-api.application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alves\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\alves\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",

@@ -2,7 +2,7 @@
 
 public class UserUpdateDTO
 {
-    public Guid IdUser { get; set; }
+    public required Guid IdUser { get; set; }
 
     public string Name { get; set; }
 
@@ -12,7 +12,6 @@ public class UserUpdateDTO
 
     public string PhoneNumber { get; set; }
 
-    public bool EmailConfirmed { get; set; }
+    public string Email { get; set; }
 
-    public bool IsValid { get; set; }
 }

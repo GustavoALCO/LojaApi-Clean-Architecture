@@ -14,7 +14,7 @@ public class Cupom
 
     public int Quantity { get; set; }
 
-    public DateTime ExpirationDate { get; set; }
+    public bool IsValid { get; set; }
 
     public Auditable Auditable { get; set; }
 }

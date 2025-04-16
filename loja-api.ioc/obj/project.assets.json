@@ -4714,11 +4714,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.ioc\\loja-api.ioc.csproj",
+      "projectUniqueName": "D:\\LojaApi-Clean-Architecture\\loja-api.ioc\\loja-api.ioc.csproj",
       "projectName": "loja-api.ioc",
-      "projectPath": "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.ioc\\loja-api.ioc.csproj",
+      "projectPath": "D:\\LojaApi-Clean-Architecture\\loja-api.ioc\\loja-api.ioc.csproj",
       "packagesPath": "C:\\Users\\alves\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.ioc\\obj\\",
+      "outputPath": "D:\\LojaApi-Clean-Architecture\\loja-api.ioc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4740,14 +4740,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.application\\loja-api.application.csproj": {
-              "projectPath": "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.application\\loja-api.application.csproj"
+            "D:\\LojaApi-Clean-Architecture\\loja-api.application\\loja-api.application.csproj": {
+              "projectPath": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\loja-api.application.csproj"
             },
-            "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.domain\\loja-api.domain.csproj": {
-              "projectPath": "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.domain\\loja-api.domain.csproj"
+            "D:\\LojaApi-Clean-Architecture\\loja-api.domain\\loja-api.domain.csproj": {
+              "projectPath": "D:\\LojaApi-Clean-Architecture\\loja-api.domain\\loja-api.domain.csproj"
             },
-            "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.infra\\loja-api.infra.csproj": {
-              "projectPath": "C:\\Users\\alves\\Downloads\\Projeto8semestre\\loja-api.infra\\loja-api.infra.csproj"
+            "D:\\LojaApi-Clean-Architecture\\loja-api.infra\\loja-api.infra.csproj": {
+              "projectPath": "D:\\LojaApi-Clean-Architecture\\loja-api.infra\\loja-api.infra.csproj"
             }
           }
         }
@@ -4761,7 +4761,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -4796,7 +4797,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

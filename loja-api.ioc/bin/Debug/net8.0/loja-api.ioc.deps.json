@@ -1144,12 +1144,18 @@
           "mercadopago-sdk": "2.4.2"
         },
         "runtime": {
-          "loja-api.application.dll": {}
+          "loja-api.application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "loja-api.domain/1.0.0": {
         "runtime": {
-          "loja-api.domain.dll": {}
+          "loja-api.domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "loja-api.infra/1.0.0": {
@@ -1163,7 +1169,10 @@
           "loja-api.domain": "1.0.0"
         },
         "runtime": {
-          "loja-api.infra.dll": {}
+          "loja-api.infra.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

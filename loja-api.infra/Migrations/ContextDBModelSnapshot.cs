@@ -139,7 +139,7 @@ namespace loja_api.infra.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("loja_api.domain.Entities.Storage", b =>
+            modelBuilder.Entity("loja_api.domain.Entities.Storages", b =>
                 {
                     b.Property<Guid>("IdStorage")
                         .ValueGeneratedOnAdd()
@@ -366,7 +366,7 @@ namespace loja_api.infra.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("loja_api.domain.Entities.Storage", b =>
+            modelBuilder.Entity("loja_api.domain.Entities.Storages", b =>
                 {
                     b.HasOne("loja_api.domain.Entities.Products", "Products")
                         .WithMany("Storages")
@@ -376,7 +376,7 @@ namespace loja_api.infra.Migrations
 
                     b.OwnsOne("loja_api.domain.Entities.auxiliar.Auditable", "Auditable", b1 =>
                         {
-                            b1.Property<Guid>("StorageIdStorage")
+                            b1.Property<Guid>("StoragesIdStorage")
                                 .HasColumnType("uniqueidentifier");
 
                             b1.Property<DateTime>("CreateDate")
@@ -391,12 +391,12 @@ namespace loja_api.infra.Migrations
                             b1.Property<int>("UpdatebyId")
                                 .HasColumnType("int");
 
-                            b1.HasKey("StorageIdStorage");
+                            b1.HasKey("StoragesIdStorage");
 
                             b1.ToTable("Storage");
 
                             b1.WithOwner()
-                                .HasForeignKey("StorageIdStorage");
+                                .HasForeignKey("StoragesIdStorage");
                         });
 
                     b.Navigation("Auditable")

@@ -1,0 +1,454 @@
+[
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.UserController",
+    "Method": "PutUser",
+    "RelativePath": "AlterarUser",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateUsers",
+        "Type": "loja_api.application.Mapper.User.UserUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.ProductControlers",
+    "Method": "GetProductsId",
+    "RelativePath": "api/ProductControlers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.ProductControlers",
+    "Method": "CreateProductsFilter",
+    "RelativePath": "api/ProductControlers/CreateProducts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productsCreate",
+        "Type": "loja_api.application.Mapper.Product.ProductsCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.ProductControlers",
+    "Method": "DeleteProducts",
+    "RelativePath": "api/ProductControlers/DeleteProducts",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.ProductControlers",
+    "Method": "GetProductsFilter",
+    "RelativePath": "api/ProductControlers/GetProductsFilter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productsFilterDTO",
+        "Type": "loja_api.application.Mapper.Product.ProductsFilterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.ProductControlers",
+    "Method": "GetAllProducts",
+    "RelativePath": "api/ProductControlers/GetProductsName/{name}/{page}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.ProductControlers",
+    "Method": "UpdateImagesAsync",
+    "RelativePath": "api/ProductControlers/UpdateImages",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "Images",
+        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.ProductControlers",
+    "Method": "UpdateProducts",
+    "RelativePath": "api/ProductControlers/UpdateProducts",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDTO",
+        "Type": "loja_api.application.Mapper.Product.ProductsUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.StorageController",
+    "Method": "AlterarStorage",
+    "RelativePath": "api/Storage/AlterarStorage",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "storageUpdateDTO",
+        "Type": "loja_api.application.Mapper.Storage.StorageUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.StorageController",
+    "Method": "DeleteStorage",
+    "RelativePath": "api/Storage/DeleteStorage",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idStorage",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.StorageController",
+    "Method": "GetAllStorages",
+    "RelativePath": "api/Storage/GetAllStorage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdProducts",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.StorageController",
+    "Method": "GetStorageId",
+    "RelativePath": "api/Storage/GetStorageID",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdStorage",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.StorageController",
+    "Method": "GetValueStorage",
+    "RelativePath": "api/Storage/GetValueStorage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdProducts",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.StorageController",
+    "Method": "PostStorageAsync",
+    "RelativePath": "api/Storage/PostStorages",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "storageCreateDTO",
+        "Type": "loja_api.application.Mapper.Storage.StorageCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.UserController",
+    "Method": "PathIsValid",
+    "RelativePath": "AtualizarIsValis{Id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.UserController",
+    "Method": "GetUserId",
+    "RelativePath": "BuscarUsuario{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.UserController",
+    "Method": "GetUserEmail",
+    "RelativePath": "BuscarUsuarioEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.UserController",
+    "Method": "GetAllUsers",
+    "RelativePath": "BuscarUsuarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.UserController",
+    "Method": "PathEmail",
+    "RelativePath": "ConfirmarEmail{Id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.PaymantController",
+    "Method": "CreatePayment",
+    "RelativePath": "CreatePaymant",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymantDTO",
+        "Type": "loja_api.application.Mapper.Paymant.PaymantDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.UserController",
+    "Method": "PostUser",
+    "RelativePath": "CreateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCreate",
+        "Type": "loja_api.application.Mapper.User.UserCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "DeleteUser{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.UserController",
+    "Method": "FilterUser",
+    "RelativePath": "FiltroUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "loja_api.application.Mapper.User.UserFilterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.PaymantController",
+    "Method": "GetAllPaymant",
+    "RelativePath": "GetAllPaymants",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.PaymantController",
+    "Method": "GetAllPaymantsUser",
+    "RelativePath": "GetAllPaymantsUser/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.PaymantController",
+    "Method": "GetIdPaymants",
+    "RelativePath": "GetPaymants/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "loja_api.endpoints.Controlers.PaymantController",
+    "Method": "RecibeWebHook",
+    "RelativePath": "WebHook",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "System.Object",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

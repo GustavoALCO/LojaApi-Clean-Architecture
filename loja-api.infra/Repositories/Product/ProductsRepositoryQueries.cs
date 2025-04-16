@@ -42,8 +42,6 @@ public class ProductsRepositoryQueries : IProductsQueryRepository
 
     public async Task<IEnumerable<Products>> GetFilterProductsAsync(IQueryable<Products> query, int page)
     {
-        //Define a variavel Page para retornar o valor da pagina multiplicado por 10 
-        page = page * 10;
 
         var queryReturn = await query.Take(page).ToListAsync();
 

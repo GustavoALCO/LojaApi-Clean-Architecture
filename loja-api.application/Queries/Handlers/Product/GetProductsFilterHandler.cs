@@ -3,8 +3,6 @@ using loja_api.application.Mapper.Product;
 using loja_api.application.Queries.Product;
 using loja_api.domain.Interfaces.products;
 using MediatR;
-using Microsoft.AspNetCore.Mvc.Filters;
-using System.Reflection;
 
 namespace loja_api.application.Queries.Handlers.Product
 {
@@ -22,10 +20,17 @@ namespace loja_api.application.Queries.Handlers.Product
         // O parâmetro 'request' é do tipo 'GetProductsFilterQuery', e 'request.FilterDTO' é o 'ProductsFilterDTO'
         public async Task<IEnumerable<ProductsDTO>> Handle(GetProductsFilterQuery request, CancellationToken cancellationToken)
         {
+            //Acessa todas as variaveis do DTO
             var productsFilter = request.FilterDTO;
 
+            //Acessa a Variavel de Pagina do DTO
+            var page = productsFilter.page;
+            //Verifica se contem algum valor menor que 1
+            if(page < 1)
+                page = 1;
+
             // Definir a página com base no filtro (multiplicado por 10 para calcular o offset)
-            var page = productsFilter.page * 10;
+            page = productsFilter.page * 10;
 
             // Criando uma query inicial para buscar produtos
             var query = _repository.GetFilteredQuery();

@@ -9,7 +9,7 @@ namespace loja_api.application.Services;
 
 public class MercadoPagoService : IMercadoPagoService
 {
-    public async Task<Preference> CreatePaymantAsync(PaymantDTO PaymantDTO, UserDTO user)
+    public async Task<Preference> CreatePaymantAsync(Paymant PaymantDTO, User user)
     {
         var request = new PreferenceRequest
         {
@@ -20,7 +20,7 @@ public class MercadoPagoService : IMercadoPagoService
         {
             Id = Guid.NewGuid().ToString(),
             Title = "Finalizando Compra No Loja-Peças",
-            Quantity = PaymantDTO.ProductsMarket.Count,
+            Quantity = PaymantDTO.ProductsPaymant.Count,
             CurrencyId = "BRL",
             UnitPrice = (decimal)PaymantDTO.Price,
         },

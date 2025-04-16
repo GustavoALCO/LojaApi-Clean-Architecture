@@ -462,7 +462,10 @@
       },
       "loja-api.domain/1.0.0": {
         "runtime": {
-          "loja-api.domain.dll": {}
+          "loja-api.domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

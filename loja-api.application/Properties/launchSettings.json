@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Perfil 1": {
+      "commandName": "Executable",
+      "executablePath": "D:\\LojaApi-Clean-Architecture\\loja-api.endpoints\\loja-api.endpoints.csproj"
+    }
+  }
+}

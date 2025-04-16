@@ -1,9 +1,9 @@
 ﻿using loja_api.application.Commands.Storage;
 using loja_api.application.Mapper.Storage;
 using loja_api.application.Queries.Storage;
-using loja_api.application.Queries.Storage.Handler;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace loja_api.endpoints.Controlers;
 

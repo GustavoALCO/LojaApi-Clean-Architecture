@@ -12,6 +12,10 @@ using loja_api.application.Services;
 using loja_api.domain.Interfaces.Storage;
 using loja_api.infra.Repositories.Storages;
 using loja_api.infra.Repositories.Storage;
+using loja_api.domain.Interfaces.Users;
+using loja_api.infra.Repositories.Users;
+using loja_api.domain.Interfaces.Paymants;
+using loja_api.infra.Repositories.Paymant;
 
 namespace loja_api.ioc;
 
@@ -55,12 +59,13 @@ public static class DependencyInjection
                     Type = ReferenceType.SecurityScheme
                 }
             };
-        
+
             c.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, securitySchema);
             c.AddSecurityRequirement(new OpenApiSecurityRequirement
             {
                 {securitySchema, new string[] {} }
             });
+
         });
 
         return services;
@@ -103,6 +108,12 @@ public static class DependencyInjection
         services.AddScoped<IProductsRepositoryCommands, ProductsRepositoryCommands>();
         services.AddScoped<IStorageRepositoryCommands, StorageRepositoryCommands>();
         services.AddScoped<IStorageRepositoryQueries, StorageRepositoryQueries>();
+        services.AddScoped<IUserRepositoryCommands, UserRepositoryCommands>();
+        services.AddScoped<IUserRepositoryQueries, UserRepositoryQuery>();
+        services.AddScoped<IpaymantRepositotyQuery, PaymantRepositoryQuery>();
+        services.AddScoped<IProductsRepositoryCommands, ProductsRepositoryCommands>();
+        services.AddScoped<IpaymantRepositotyQuery, PaymantRepositoryQuery>();
+        services.AddScoped<IPaymantRepositoryCommands, PaymantRepositoryCommands>();
 
         return services;    
     }

@@ -1,9 +1,7 @@
 ﻿namespace loja_api.application.Mapper.Employee;
 
-internal class EmployeeUpdateDTO
+public class EmployeeUpdateDTO
 {
-    public int Id { get; set; }
-
     public string FullName { get; set; }
 
     public string Login { get; set; }

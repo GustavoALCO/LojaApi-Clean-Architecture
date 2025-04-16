@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("loja-api.infra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee5d900ea9ac5d391d6e4be95d6ca97a2f1c4a8f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd339dceb1a1216c08d14c2321bd19c215d8d7c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("loja-api.infra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("loja-api.infra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

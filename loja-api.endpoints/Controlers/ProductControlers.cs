@@ -104,7 +104,7 @@ public class ProductControlers : ControllerBase
         }
     }
 
-    [HttpPut("UpdateImages")]
+    [HttpPatch("UpdateImages")]
     public async Task<IActionResult> UpdateImagesAsync([FromQuery] Guid Id, [FromBody] List<string> Images)
     {
         try
