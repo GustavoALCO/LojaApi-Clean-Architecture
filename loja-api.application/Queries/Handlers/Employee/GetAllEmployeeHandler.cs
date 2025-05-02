@@ -20,7 +20,14 @@ public class GetAllEmployeeHandler : IRequestHandler<GetAllEmployeeQuery, IEnume
 
     public async Task<IEnumerable<EmployeeDTO>> Handle(GetAllEmployeeQuery request, CancellationToken cancellationToken)
     {
-        var employee = _mapper.Map<IEnumerable<EmployeeDTO>>(await _query.GetAllEmployeeAsync(request.page));
+        var page = request.page;
+
+        if (page < 1)
+            page = 1;
+
+        page = page * 10;
+
+        var employee = _mapper.Map<IEnumerable<EmployeeDTO>>(await _query.GetAllEmployeeAsync(page));
 
         return employee;
     }

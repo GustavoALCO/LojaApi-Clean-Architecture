@@ -4,8 +4,8 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using loja_api.application.Models;
-using loja_api.application.Interfaces.Auxiliar;
 using Microsoft.Extensions.Options;
+using loja_api.application.Interfaces;
 
 namespace loja_api.application.Services;
 

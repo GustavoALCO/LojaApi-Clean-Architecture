@@ -1,5 +1,5 @@
 ﻿using Azure.Storage.Blobs;
-using loja_api.application.Interfaces.Auxiliar;
+using loja_api.application.Interfaces;
 using loja_api.application.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;

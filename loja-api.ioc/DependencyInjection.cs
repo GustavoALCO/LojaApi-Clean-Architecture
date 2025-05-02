@@ -4,7 +4,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using loja_api.application.Interfaces.Auxiliar;
 using System.Reflection;
 using loja_api.domain.Interfaces.products;
 using loja_api.infra.Repositories.Product;
@@ -16,6 +15,11 @@ using loja_api.domain.Interfaces.Users;
 using loja_api.infra.Repositories.Users;
 using loja_api.domain.Interfaces.Paymants;
 using loja_api.infra.Repositories.Paymant;
+using loja_api.domain.Interfaces.Employee;
+using loja_api.infra.Repositories.Employee;
+using loja_api.domain.Interfaces.Cupom;
+using loja_api.infra.Repositories.Cupom;
+using loja_api.application.Interfaces;
 
 namespace loja_api.ioc;
 
@@ -25,7 +29,7 @@ public static class DependencyInjection
     {
         services.AddDbContext<ContextDB>(o =>
         {
-            o.UseSqlServer(configuration.GetConnectionString("DBString"),
+            o.UseSqlServer("Server=Dbserver;Database=WEBAPI;User Id=sa;Password=P@ssw0rd!;TrustServerCertificate=true;",
                 m => m.MigrationsAssembly(typeof(ContextDB).Assembly.FullName));
         });
 
@@ -84,6 +88,7 @@ public static class DependencyInjection
         services.AddScoped<IJwtService, JwtService>();
         services.AddScoped<IHashService, HashService>();
         services.AddScoped<IImageService, ImageService>();
+        services.AddScoped<IUpdateStorage, UpdateStorage>();
 
         return services;
     }//Declara Todos os Services
@@ -114,6 +119,10 @@ public static class DependencyInjection
         services.AddScoped<IProductsRepositoryCommands, ProductsRepositoryCommands>();
         services.AddScoped<IpaymantRepositotyQuery, PaymantRepositoryQuery>();
         services.AddScoped<IPaymantRepositoryCommands, PaymantRepositoryCommands>();
+        services.AddScoped<IEmployeeRepositoryCommands, EmployeeRepositoryCommands>();
+        services.AddScoped<IEmployeeRepositoryQuery, EmployeeRepositoryQueries>();
+        services.AddScoped<ICupomRepositoryCommands, CupomRepositoryCommands>();
+        services.AddScoped<ICupomRepositoryQuery, CupomRepositoryQuery>();
 
         return services;    
     }

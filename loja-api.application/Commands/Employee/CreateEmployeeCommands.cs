@@ -5,5 +5,13 @@ namespace loja_api.application.Commands.Employee;
 
 public class CreateEmployeeCommands : IRequest
 {
-    public EmployeeCreateDTO EmployeeCreateDTO { get; set; }
+    public required string FullName { get; set; }
+
+    public required string Login { get; set; }
+
+    public required string Password { get; set; }
+
+    public required string Position { get; set; }
+
+    public int CreatebyId { get; set; }
 }

@@ -23,12 +23,24 @@ public class CreateEmployeeHandlers : IRequestHandler<CreateEmployeeCommands>
 
     public async Task Handle(CreateEmployeeCommands request, CancellationToken cancellationToken)
     {
-        var employee = await _query.GetEmployeeLoginAsync(request.EmployeeCreateDTO.Login);
+        var employee = await _query.GetEmployeeLoginAsync(request.Login);
 
-        if (employee == null)
+        if (employee != null)
             throw new Exception("Usuario Com Login Existente");
 
-        await _commands.CreateEmployeeAsync(_mapper.Map<domain.Entities.Employee>(request.EmployeeCreateDTO));
+        await _commands.CreateEmployeeAsync(new domain.Entities.Employee
+        {
+            FullName = request.FullName,
+            Login = request.Login,
+            Password = request.Password,    
+            Position = request.Position,
+            IsActive = true,
+            Auditable = new domain.Entities.auxiliar.Auditable {
+                                                                 CreatebyId = request.CreatebyId,
+                                                                 CreateDate = DateTime.Now
+                                                                }
+
+        });
 
     }
 }

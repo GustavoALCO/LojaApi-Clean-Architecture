@@ -43,3 +43,4 @@ D:\LojaApi-Clean-Architecture\loja-api.ioc\obj\Debug\net8.0\refint\loja-api.ioc.
 D:\LojaApi-Clean-Architecture\loja-api.ioc\obj\Debug\net8.0\loja-api.ioc.pdb
 D:\LojaApi-Clean-Architecture\loja-api.ioc\obj\Debug\net8.0\loja-api.ioc.genruntimeconfig.cache
 D:\LojaApi-Clean-Architecture\loja-api.ioc\obj\Debug\net8.0\ref\loja-api.ioc.dll
+D:\LojaApi-Clean-Architecture\loja-api.ioc\bin\Debug\net8.0\appsettings.json

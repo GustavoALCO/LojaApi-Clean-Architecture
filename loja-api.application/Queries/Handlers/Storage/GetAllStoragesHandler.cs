@@ -21,7 +21,7 @@ public class GetAllStoragesHandler : IRequestHandler<GetAllStoragesAsyncQuery, I
 
     public async Task<IEnumerable<StorageDTO>> Handle(GetAllStoragesAsyncQuery request, CancellationToken cancellationToken)
     {
-        var storage = await _StorageRepositoryQueries.GetStoragesAllAsync(request.IdProducts);
+        var storage = await _StorageRepositoryQueries.GetStoragesAllAsync();
 
         if (storage == null)
             throw new Exception("Não foi possivel encontrar nenhum storage");

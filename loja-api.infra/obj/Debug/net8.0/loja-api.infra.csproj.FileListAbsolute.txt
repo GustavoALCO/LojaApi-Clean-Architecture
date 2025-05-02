@@ -39,3 +39,4 @@ D:\LojaApi-Clean-Architecture\loja-api.infra\obj\Debug\net8.0\refint\loja-api.in
 D:\LojaApi-Clean-Architecture\loja-api.infra\obj\Debug\net8.0\loja-api.infra.pdb
 D:\LojaApi-Clean-Architecture\loja-api.infra\obj\Debug\net8.0\loja-api.infra.genruntimeconfig.cache
 D:\LojaApi-Clean-Architecture\loja-api.infra\obj\Debug\net8.0\ref\loja-api.infra.dll
+D:\LojaApi-Clean-Architecture\loja-api.infra\bin\Debug\net8.0\appsettings.json

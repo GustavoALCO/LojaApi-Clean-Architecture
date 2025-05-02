@@ -1,5 +1,5 @@
 ﻿using loja_api.application.Commands.Users;
-using loja_api.application.Interfaces.Auxiliar;
+using loja_api.application.Interfaces;
 using loja_api.domain.Interfaces.Users;
 using MediatR;
 using Microsoft.AspNetCore.Identity;

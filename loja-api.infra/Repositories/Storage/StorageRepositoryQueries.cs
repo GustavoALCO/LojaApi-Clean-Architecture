@@ -35,10 +35,20 @@ public class StorageRepositoryQueries : IStorageRepositoryQueries
         return quantity;
     }
 
-    public async Task<IEnumerable<domain.Entities.Storages>> GetStoragesAllAsync(Guid IdProducts)
+    public async Task<IEnumerable<domain.Entities.Storages>> GetStoragesAllAsync()
     {
-        var storage = await _DB.Storage.Where(s => IdProducts == null || s.IdProducts == IdProducts).ToListAsync();
+        var storage = await _DB.Storage.ToListAsync();
 
         return storage;
+    }
+
+    public async Task<domain.Entities.Storages> GetStorageByProducts(Guid Idproducts, int quantity)
+    {
+        var storages = await _DB.Storage
+                                        .Where(c => c.IsValid == true && c.Quantity > quantity)
+                                        .OrderBy(p => p.Auditable.CreateDate)
+                                        .FirstOrDefaultAsync();
+
+        return storages;
     }
 }

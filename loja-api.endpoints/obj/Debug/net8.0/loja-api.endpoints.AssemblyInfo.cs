@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("c316271c-c43d-4c3a-9ac6-f487055111b8")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("loja-api.endpoints")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd339dceb1a1216c08d14c2321bd19c215d8d7c6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3466fcf1180d601873b5ca31211dbe3662e86862")]
 [assembly: System.Reflection.AssemblyProductAttribute("loja-api.endpoints")]
 [assembly: System.Reflection.AssemblyTitleAttribute("loja-api.endpoints")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

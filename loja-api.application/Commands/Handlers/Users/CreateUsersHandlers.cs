@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using loja_api.application.Commands.Users;
-using loja_api.application.Interfaces.Auxiliar;
+using loja_api.application.Interfaces;
 using loja_api.domain.Entities;
 using loja_api.domain.Interfaces.Users;
 using MediatR;

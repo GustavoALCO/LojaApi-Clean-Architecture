@@ -1,4 +1,4 @@
-﻿using loja_api.application.Interfaces.Auxiliar;
+﻿using loja_api.application.Interfaces;
 using loja_api.application.Mapper.Paymant;
 using loja_api.application.Mapper.User;
 using loja_api.domain.Entities;

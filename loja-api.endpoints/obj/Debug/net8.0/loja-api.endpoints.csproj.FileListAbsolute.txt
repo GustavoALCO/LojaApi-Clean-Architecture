@@ -342,10 +342,10 @@ D:\LojaApi-Clean-Architecture\loja-api.endpoints\obj\Debug\net8.0\staticwebasset
 D:\LojaApi-Clean-Architecture\loja-api.endpoints\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.loja-api.endpoints.props
 D:\LojaApi-Clean-Architecture\loja-api.endpoints\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.loja-api.endpoints.props
 D:\LojaApi-Clean-Architecture\loja-api.endpoints\obj\Debug\net8.0\staticwebassets.pack.json
-D:\LojaApi-Clean-Architecture\loja-api.endpoints\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\LojaApi-Clean-Architecture\loja-api.endpoints\obj\Debug\net8.0\loja-api.663F0AC7.Up2Date
 D:\LojaApi-Clean-Architecture\loja-api.endpoints\obj\Debug\net8.0\loja-api.endpoints.dll
 D:\LojaApi-Clean-Architecture\loja-api.endpoints\obj\Debug\net8.0\refint\loja-api.endpoints.dll
 D:\LojaApi-Clean-Architecture\loja-api.endpoints\obj\Debug\net8.0\loja-api.endpoints.pdb
 D:\LojaApi-Clean-Architecture\loja-api.endpoints\obj\Debug\net8.0\loja-api.endpoints.genruntimeconfig.cache
 D:\LojaApi-Clean-Architecture\loja-api.endpoints\obj\Debug\net8.0\ref\loja-api.endpoints.dll
+D:\LojaApi-Clean-Architecture\loja-api.endpoints\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

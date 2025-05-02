@@ -9,15 +9,11 @@ namespace loja_api.infra.Context
     {
         public ContextDB CreateDbContext(string[] args)
         {
-            var configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();
 
             var optionsBuilder = new DbContextOptionsBuilder<ContextDB>();
-            var connectionString = configuration.GetConnectionString("DBString");
+            
 
-            optionsBuilder.UseSqlServer(connectionString);
+            optionsBuilder.UseSqlServer("Server=localhost,8002;Database=WEBAPI;User Id=sa;Password=P@ssw0rd!;TrustServerCertificate=True;");
 
             return new ContextDB(optionsBuilder.Options);
         }

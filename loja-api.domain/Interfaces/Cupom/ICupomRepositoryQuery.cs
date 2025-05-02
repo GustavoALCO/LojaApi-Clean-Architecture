@@ -8,6 +8,8 @@ public interface ICupomRepositoryQuery
 
     public Task<Entities.Cupom> GetCupom( Guid id);
 
+    public Task<Entities.Cupom> GetCupomNameAsync(string name);
+
     public Task<IEnumerable<Entities.Cupom>> GetCuponsFilter(IQueryable<Entities.Cupom> Filter, int page);
 
     public IQueryable<Entities.Cupom> GetQuery();

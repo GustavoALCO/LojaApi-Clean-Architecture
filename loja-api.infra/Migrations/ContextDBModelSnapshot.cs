@@ -31,8 +31,8 @@ namespace loja_api.infra.Migrations
                     b.Property<int>("Discount")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("ExpirationDate")
-                        .HasColumnType("datetime2");
+                    b.Property<bool>("IsValid")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()

@@ -5,7 +5,7 @@ namespace loja_api.application.Commands.Cupom;
 
 public class UpdateCupomCommands : IRequest
 {
-    public Guid Id { get; set; }
+    public required Guid Id { get; set; }
 
     public CupomUpdateDTO CupomUpdateDTO { get; set; }
 }

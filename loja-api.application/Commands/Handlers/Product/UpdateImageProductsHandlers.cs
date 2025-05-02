@@ -1,5 +1,5 @@
 ﻿using loja_api.application.Commands.Product;
-using loja_api.application.Interfaces.Auxiliar;
+using loja_api.application.Interfaces;
 using loja_api.application.Queries.Product;
 using loja_api.domain.Interfaces.products;
 using MediatR;

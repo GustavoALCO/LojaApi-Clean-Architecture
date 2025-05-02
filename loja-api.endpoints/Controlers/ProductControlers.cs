@@ -3,7 +3,6 @@ using loja_api.application.Mapper.Product;
 using loja_api.application.Queries.Product;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Query;
 
 namespace loja_api.endpoints.Controlers;
 

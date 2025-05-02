@@ -5,4 +5,5 @@ namespace loja_api.application.Queries.Cupom;
 
 public class GetAllCupomQuery : IRequest<IEnumerable<CupomDTO>>
 {
+    public int page { get; set; }
 }

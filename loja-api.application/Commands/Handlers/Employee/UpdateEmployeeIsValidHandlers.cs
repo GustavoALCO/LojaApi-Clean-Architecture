@@ -10,23 +10,23 @@ public class UpdateEmployeeIsValidHandlers : IRequestHandler<UpdateIsValidEmploy
 
     private readonly IEmployeeRepositoryQuery _query;
 
+    public UpdateEmployeeIsValidHandlers(IEmployeeRepositoryQuery query, IEmployeeRepositoryCommands commands)
+    {
+        _query = query;
+        _commands = commands;
+    }
+
     public async Task Handle(UpdateIsValidEmployeeCommands request, CancellationToken cancellationToken)
     {
-        try
-        {
-            var employee = await _query.GetEmployeeIDAsync(request.Id);
+      
+        var employee = await _query.GetEmployeeIDAsync(request.Id);
 
-            if (employee == null)
-                throw new Exception("Funcionario Não Encontrado");
+        if (employee == null)
+            throw new Exception("Funcionario Não Encontrado");
 
-            employee.IsActive = request.IsValid;
+        employee.IsActive = !employee.IsActive;
 
-            await _commands.UpdateEmployeeAsync(employee);
+        await _commands.UpdateEmployeeAsync(employee);
 
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.ToString());
-        }
     }
 }

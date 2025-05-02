@@ -25,7 +25,9 @@ public class EmployeeRepositoryQueries : IEmployeeRepositoryQuery
 
     public async Task<domain.Entities.Employee> GetEmployeeIDAsync(int Id)
     {
-        return await _context.Employee.FirstOrDefaultAsync(x => x.Id == Id);
+        var employee = await _context.Employee.FirstOrDefaultAsync(x => x.Id == Id);
+
+        return employee;
     }
 
     public IQueryable<domain.Entities.Employee> GetQuery()

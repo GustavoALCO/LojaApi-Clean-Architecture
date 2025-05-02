@@ -48,11 +48,11 @@ public class StorageController : ControllerBase
     }
 
     [HttpGet("GetAllStorage")]
-    public async Task<IActionResult> GetAllStorages([FromQuery] Guid IdProducts)
+    public async Task<IActionResult> GetAllStorages()
     {
         try
         {
-            var value = await _mediator.Send(new GetAllStoragesAsyncQuery { IdProducts = IdProducts });
+            var value = await _mediator.Send(new GetAllStoragesAsyncQuery { });
 
             return Ok(value);
         }

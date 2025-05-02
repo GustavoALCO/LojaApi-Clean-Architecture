@@ -27,6 +27,13 @@ public class CupomRepositoryQuery : ICupomRepositoryQuery
         return Cupom;
     }
 
+    public async Task<domain.Entities.Cupom> GetCupomNameAsync(string name)
+    {
+        var cupom = await _DB.Cupom.FirstOrDefaultAsync(c => c.Name == name && c.IsValid == true);
+
+        return cupom;
+    }
+
     public async Task<IEnumerable<domain.Entities.Cupom>> GetCuponsFilter(IQueryable<domain.Entities.Cupom> Filter,int page)
     {
         var cupom = await Filter.Take(page).ToListAsync();
