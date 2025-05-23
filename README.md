@@ -8,11 +8,13 @@
 
 - .NET - Backend da API
 
-- Entity Framework Core - ORM para interação com banco de dados
+- Docker 
 
-- SQL Server - Banco de dados relacional
+- Entity Framework Core 
 
-- FluentValidation - Validação de dados
+- SQL Server - Banco de dados em imagem docker
+
+- Azure Blob - Salva as imagens em um container
 
 - JWT (JSON Web Token) - Autenticação e segurança
 
