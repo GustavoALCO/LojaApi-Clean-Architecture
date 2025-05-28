@@ -2,6 +2,7 @@
 using loja_api.application.Mapper.Cupom;
 using loja_api.application.Queries.Cupom;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace loja_api.endpoints.Controlers;
@@ -16,13 +17,14 @@ public class CupomControllers : ControllerBase
         _mediator = mediator;
     }
 
+    [Authorize]
     [HttpGet("BuscarCuponsValidos")]
     public async Task<IActionResult> GetAllCupons([FromQuery] 
                                                     int page)
     {
         return Ok(await _mediator.Send(new GetAllCupomQuery { page = page }));
     }
-
+    
     [HttpGet("BuscarCupons/{id}")]
     public async Task<IActionResult> GetAllCupons(Guid id)
     {
@@ -35,6 +37,7 @@ public class CupomControllers : ControllerBase
         return Ok(await _mediator.Send(query));
     }
 
+    [Authorize]
     [HttpPost("CriarCupons")]
     public async Task<IActionResult> CreateCupom([FromBody]
                                                     CreateCupomCommands createCupomCommands)
@@ -44,6 +47,7 @@ public class CupomControllers : ControllerBase
         return Ok();
     }
 
+    [Authorize]
     [HttpPut("UpdateCupom")]
     public async Task<IActionResult> UpdateCupom([FromQuery]
                                                 Guid Id,                               
@@ -53,6 +57,7 @@ public class CupomControllers : ControllerBase
         return Ok(_mediator.Send(new UpdateCupomCommands { Id = Id, CupomUpdateDTO = cupom }));
     }
 
+    [Authorize]
     [HttpPatch("AlterarIsvalid")]
     public async Task<IActionResult> PathCupom(PathCupomCommands pathCupom)
     {

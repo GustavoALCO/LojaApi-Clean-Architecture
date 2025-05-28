@@ -20,6 +20,8 @@ using loja_api.infra.Repositories.Employee;
 using loja_api.domain.Interfaces.Cupom;
 using loja_api.infra.Repositories.Cupom;
 using loja_api.application.Interfaces;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace loja_api.ioc;
 
@@ -36,44 +38,67 @@ public static class DependencyInjection
         return services;
     }//Cria uma ServiceCollection para uma conexão com o banco de dados 
 
+    public static IServiceCollection AddAuth(this IServiceCollection services)
+    {
+        services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme) 
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = "MeuBackEnd",
+                    ValidAudience = "MeuFrontEnd",
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("69f6ab5d-904b-4793-af49-a3dc0a1b1412"))
+                };
+            });
+
+        services.AddAuthorization();
+
+        return services;
+    }
+
+
     public static IServiceCollection AddSwagger(this IServiceCollection services)
     {
         services.AddSwaggerGen(c =>
-        {
-        
-        
-            c.SwaggerDoc("v1", new OpenApiInfo
-            {
-                Title = "Loja Ferramentas- API"
-                //Declara Um titulo para o Swagger
-            });
-        
-            // Configuração do JWT no Swagger
-            var securitySchema = new OpenApiSecurityScheme
-            {
-                Name = "Jwt Authentication",
-                Description = "Entre com o JWT Bearer",
-                In = ParameterLocation.Header,
-                Type = SecuritySchemeType.ApiKey,
-                Scheme = "bearer",
-                BearerFormat = "JWT",
-                Reference = new OpenApiReference
-                {
-                    Id = JwtBearerDefaults.AuthenticationScheme,
-                    Type = ReferenceType.SecurityScheme
-                }
-            };
-
-            c.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, securitySchema);
-            c.AddSecurityRequirement(new OpenApiSecurityRequirement
-            {
-                {securitySchema, new string[] {} }
-            });
-
-        });
+                                    {
+                                    
+                                    
+                                        c.SwaggerDoc("v1", new OpenApiInfo
+                                        {
+                                            Title = "Loja - API",
+                                            Version = "v1"
+                                        });
+                                    
+                                        // Configuração do JWT no Swagger
+                                        var securitySchema = new OpenApiSecurityScheme
+                                        {
+                                            Name = "Jwt Authentication",
+                                            Description = "Entre com o JWT Bearer",
+                                            In = ParameterLocation.Header,
+                                            Type = SecuritySchemeType.Http,
+                                            Scheme = "bearer",
+                                            BearerFormat = "JWT",
+                                            Reference = new OpenApiReference
+                                            {
+                                                Id = JwtBearerDefaults.AuthenticationScheme,
+                                                Type = ReferenceType.SecurityScheme
+                                            }
+                                        };
+                                    
+                                        c.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, securitySchema);
+                                        c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                                        {
+                                    {securitySchema, new string[] {} }
+                                        });
+                                    });
 
         return services;
-    }//Cria uma ServiceCollection do Swagger para Organizar melhor o Program do Endpoints
+    }
+    //Cria uma ServiceCollection do Swagger para Organizar melhor o Program do Endpoints
 
     public static IServiceCollection AddAutoMapper(this IServiceCollection services)
     {

@@ -2,6 +2,7 @@
 using loja_api.application.Mapper.User;
 using loja_api.application.Queries.User;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace loja_api.endpoints.Controlers;
@@ -14,7 +15,7 @@ public class UserController : ControllerBase
     {
         _mediator = mediator;
     }
-
+    [Authorize]
     [HttpGet("BuscarUsuarios")]
     public async Task<IActionResult> GetAllUsers([FromQuery]
                                                  string? name,
@@ -32,7 +33,7 @@ public class UserController : ControllerBase
             return BadRequest(ex.ToString());
         }
     }
-
+    [Authorize]
     [HttpGet("BuscarUsuario{Id}")]
     public async Task<IActionResult> GetUserId(Guid Id)
     {
@@ -62,7 +63,7 @@ public class UserController : ControllerBase
             return BadRequest(ex.ToString());
         }
     }
-
+    [Authorize]
     [HttpGet("FiltroUser")]
     public async Task<IActionResult> FilterUser([FromBody]
                                                 UserFilterDTO user)
@@ -96,7 +97,7 @@ public class UserController : ControllerBase
             return BadRequest(ex.ToString());
         }
     }
-
+    [Authorize]
     [HttpDelete("DeleteUser{Id}")]
     public async Task<IActionResult> DeleteUser(Guid Id)
     {
@@ -111,7 +112,7 @@ public class UserController : ControllerBase
             return BadRequest(ex.ToString());
         }
     }
-
+    [Authorize]
     [HttpPut("AlterarUser")]
     public async Task<IActionResult> PutUser([FromBody]
                                              UserUpdateDTO updateUsers)
@@ -126,7 +127,7 @@ public class UserController : ControllerBase
             return BadRequest(ex.ToString());
         }
     }
-
+    [Authorize]
     [HttpPatch("AtualizarIsValis{Id}")]
     public async Task<IActionResult> PathIsValid(Guid Id)
     {
@@ -142,7 +143,7 @@ public class UserController : ControllerBase
         }
     }
 
-    [HttpPatch("ConfirmarEmail{Id}")]
+    [HttpPatch("ConfirmarEmail/{Id}")]
     public async Task<IActionResult> PathEmail(Guid Id)
     {
         try
@@ -155,5 +156,16 @@ public class UserController : ControllerBase
         {
             return BadRequest(ex.ToString());
         }
+    }
+
+    [HttpPost("LoginUser")]
+    public async Task<IActionResult> LoginUser(UserLoginCommands userLogin)
+    {
+        var jwt = await _mediator.Send(userLogin);
+
+        if (jwt == null)
+            return BadRequest();
+
+        return Ok(jwt);
     }
 }

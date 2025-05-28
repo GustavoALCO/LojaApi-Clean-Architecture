@@ -60,3 +60,6 @@ D:\LojaApi-Clean-Architecture\bin\Debug\loja-api.infra.pdb
 D:\LojaApi-Clean-Architecture\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 D:\LojaApi-Clean-Architecture\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 D:\LojaApi-Clean-Architecture\obj\Debug\docker-c.35A3FFBA.Up2Date
+D:\LojaApi-Clean-Architecture\bin\Debug\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\LojaApi-Clean-Architecture\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\LojaApi-Clean-Architecture\bin\Debug\Microsoft.IdentityModel.Protocols.dll

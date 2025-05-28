@@ -2,6 +2,7 @@
 using loja_api.application.Mapper.Employee;
 using loja_api.application.Queries.Employee;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace loja_api.endpoints.Controlers;
@@ -15,6 +16,7 @@ public class EmployeeControllers : ControllerBase
         _mediator = mediator;
     }
 
+    [Authorize]
     [HttpGet("BucarTodos")]
     public async Task<IActionResult> GetAllEmployee(GetAllEmployeeQuery getAllEmployeeQuery)
     {
@@ -23,6 +25,7 @@ public class EmployeeControllers : ControllerBase
             return Ok(employee);
     }
 
+    [Authorize]
     [HttpGet("BuscarPorID/{id}")]
     public async Task<IActionResult> GetEmployeeId(GetEmployeeIdQueries getEmployeeIdQueries)
     {
@@ -31,6 +34,7 @@ public class EmployeeControllers : ControllerBase
             return Ok(emoloyee);
     }
 
+    [Authorize]
     [HttpPost("CriarFuncionario")]
     public async Task<IActionResult> CreateEmployee([FromBody]CreateEmployeeCommands createEmployee)
     {
@@ -38,7 +42,8 @@ public class EmployeeControllers : ControllerBase
 
             return Ok();
     }
-    
+
+    [Authorize]
     [HttpPut("AlterarFuncionario/{id}")]
     public async Task<IActionResult> UpdateEmployee(EmployeeUpdateDTO employeeUpdateDTO, int id)
     {
@@ -47,7 +52,7 @@ public class EmployeeControllers : ControllerBase
         return Ok();
     }
 
-
+    [Authorize]
     [HttpPatch("AlterarSenha/{id}")]
     public async Task<IActionResult> UpdatePassword(int id, string password)
     {

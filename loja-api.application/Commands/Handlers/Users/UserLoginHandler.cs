@@ -23,12 +23,12 @@ public class UserLoginHandler : IRequestHandler<UserLoginCommands, string>
 
     public async Task<string> Handle(UserLoginCommands request, CancellationToken cancellationToken)
     {
-        var User = await _usersRepositoryQueries.GetUserEmailAsync(request.User.Email);
+        var User = await _usersRepositoryQueries.GetUserEmailAsync(request.Email);
 
         if (User == null)
             throw new Exception("Email Não Encontrado");
 
-        var response = _passwordHasher.ValidatePassword(User, request.User.Password, User.Password);
+        var response = _passwordHasher.ValidatePassword(User, User.Password, request.Password);
 
         if (response == false)
             throw new Exception("Senha Incorreta");

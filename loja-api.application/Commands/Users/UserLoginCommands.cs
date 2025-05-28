@@ -5,5 +5,7 @@ namespace loja_api.application.Commands.Users;
 
 public class UserLoginCommands : IRequest<string>
 {
-    public UserLoginDTO User { get; set; }
+    public required string Email { get; set; }
+
+    public required string Password { get; set; }
 }

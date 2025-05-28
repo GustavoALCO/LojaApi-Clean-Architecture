@@ -33,6 +33,8 @@ builder.Services.AddInterfaces();
 
 builder.Services.AddControllers();
 
+builder.Services.AddAuth();
+
 var app = builder.Build();
 
 app.MapControllers();
@@ -46,5 +48,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
+
+app.UseAuthorization();
 
 app.Run();

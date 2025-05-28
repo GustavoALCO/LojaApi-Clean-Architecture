@@ -43,7 +43,7 @@ public class JwtService : IJwtService
                 //Audience e o Issuer são assinaturas para que o Jwt funcione corretamente
                 claims: claims,
                 //claims serve para passar dados adicionais do gerador do código
-                expires: DateTime.Now.AddHours(Convert.ToDouble(_configuration.ExpireHours)),
+                expires: DateTime.Now.AddHours(Convert.ToInt16(_configuration.ExpireHours)),
                 //Define quantas horas o token vai existir
                 signingCredentials: credentials
                 );

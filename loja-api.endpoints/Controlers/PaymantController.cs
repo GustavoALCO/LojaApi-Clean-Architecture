@@ -2,6 +2,7 @@
 using loja_api.application.Mapper.Paymant;
 using loja_api.application.Queries.Paymant;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace loja_api.endpoints.Controlers;
@@ -16,6 +17,7 @@ public class PaymantController : ControllerBase
         _mediator = mediator;
     }
 
+    [Authorize]
     [HttpGet("GetAllPaymants")]
     public async Task<IActionResult> GetAllPaymant([FromQuery]
                                                     int page)
@@ -32,6 +34,7 @@ public class PaymantController : ControllerBase
         }
     }
 
+    [Authorize]
     [HttpGet("GetAllPaymantsUser/{id}")]
     public async Task<IActionResult> GetAllPaymantsUser(Guid id,
                                                         [FromQuery]
@@ -49,6 +52,7 @@ public class PaymantController : ControllerBase
         }
     }
 
+    [Authorize]
     [HttpGet("GetPaymants/{id}")]
     public async Task<IActionResult> GetIdPaymants(string id)
     {
@@ -80,6 +84,7 @@ public class PaymantController : ControllerBase
         }
     }
 
+    [Authorize]
     [HttpPost("CreatePaymant")]
     public async Task<IActionResult> CreatePayment([FromBody]
                                                     PaymantDTO paymantDTO)

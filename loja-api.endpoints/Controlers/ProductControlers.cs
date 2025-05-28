@@ -2,6 +2,7 @@
 using loja_api.application.Mapper.Product;
 using loja_api.application.Queries.Product;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace loja_api.endpoints.Controlers;
@@ -54,6 +55,8 @@ public class ProductControlers : ControllerBase
         }
 
     }
+
+
     [HttpGet("GetProductsFilter")]
     public async Task<IActionResult> GetProductsFilter([FromBody]ProductsFilterDTO productsFilterDTO)
     {
@@ -72,6 +75,8 @@ public class ProductControlers : ControllerBase
         }
         
     }
+
+    [Authorize]
     [HttpPost("CreateProducts")]
     public async Task<IActionResult> CreateProductsFilter([FromBody]ProductsCreateDTO productsCreate)
     {
@@ -88,6 +93,7 @@ public class ProductControlers : ControllerBase
        
     }
 
+    [Authorize]
     [HttpPut("UpdateProducts")]
     public async Task<IActionResult> UpdateProducts([FromBody]ProductsUpdateDTO updateDTO)
     {
@@ -103,6 +109,7 @@ public class ProductControlers : ControllerBase
         }
     }
 
+    [Authorize]
     [HttpPatch("UpdateImages")]
     public async Task<IActionResult> UpdateImagesAsync([FromQuery] Guid Id, [FromBody] List<string> Images)
     {
@@ -123,6 +130,7 @@ public class ProductControlers : ControllerBase
         }
     }
 
+    [Authorize]
     [HttpDelete("DeleteProducts")]
     public async Task<IActionResult> DeleteProducts([FromQuery] Guid Id)
     {

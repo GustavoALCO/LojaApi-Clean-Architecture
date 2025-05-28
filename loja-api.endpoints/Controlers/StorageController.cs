@@ -2,6 +2,7 @@
 using loja_api.application.Mapper.Storage;
 using loja_api.application.Queries.Storage;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -16,7 +17,7 @@ public class StorageController : ControllerBase
     {
         _mediator = mediator;
     }
-
+    [Authorize]
     [HttpGet("GetValueStorage")]
     public async Task<IActionResult> GetValueStorage([FromQuery]Guid IdProducts)
     {
@@ -31,7 +32,7 @@ public class StorageController : ControllerBase
             return BadRequest(ex.Message.ToString());
         }
     }
-
+    [Authorize]
     [HttpGet("GetStorageID")]
     public async Task<IActionResult> GetStorageId([FromQuery]Guid IdStorage)
     {
@@ -46,7 +47,7 @@ public class StorageController : ControllerBase
             return BadRequest(ex.Message.ToString());
         }
     }
-
+    [Authorize]
     [HttpGet("GetAllStorage")]
     public async Task<IActionResult> GetAllStorages()
     {
@@ -61,7 +62,7 @@ public class StorageController : ControllerBase
             return BadRequest(ex.Message.ToString());
         }
     }
-
+    [Authorize]
     [HttpPost("PostStorages")]
     public async Task<IActionResult> PostStorageAsync([FromBody] StorageCreateDTO storageCreateDTO)
     {
@@ -76,7 +77,7 @@ public class StorageController : ControllerBase
             return BadRequest(ex.Message.ToList());
         }
     }
-
+    [Authorize]
     [HttpDelete("DeleteStorage")]
     public async Task<IActionResult> DeleteStorage([FromQuery] Guid idStorage)
     {
@@ -91,7 +92,7 @@ public class StorageController : ControllerBase
             return BadRequest(ex.Message.ToString());
         }
     }
-
+    [Authorize]
     [HttpPut("AlterarStorage")]
     public async Task<IActionResult> AlterarStorage([FromBody] StorageUpdateDTO storageUpdateDTO)
     {
