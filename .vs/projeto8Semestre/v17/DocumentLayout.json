@@ -3,40 +3,12 @@
   "WorkspaceRootPath": "D:\\LojaApi-Clean-Architecture\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|d:\\lojaapi-clean-architecture\\loja-api.application\\queries\\handlers\\cupom\\getallcupomhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|solutionrelative:loja-api.application\\queries\\handlers\\cupom\\getallcupomhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|d:\\lojaapi-clean-architecture\\loja-api.application\\queries\\paymant\\getallpaymantquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|solutionrelative:loja-api.application\\queries\\paymant\\getallpaymantquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|d:\\lojaapi-clean-architecture\\loja-api.application\\queries\\cupom\\getallcupomquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|solutionrelative:loja-api.application\\queries\\cupom\\getallcupomquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FA88B83-2266-446E-834B-4772433A876D}|loja-api.endpoints\\loja-api.endpoints.csproj|d:\\lojaapi-clean-architecture\\loja-api.endpoints\\controlers\\paymantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FA88B83-2266-446E-834B-4772433A876D}|loja-api.endpoints\\loja-api.endpoints.csproj|solutionrelative:loja-api.endpoints\\controlers\\paymantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|d:\\lojaapi-clean-architecture\\loja-api.application\\commands\\handlers\\paymant\\createpaymanthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|solutionrelative:loja-api.application\\commands\\handlers\\paymant\\createpaymanthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|d:\\lojaapi-clean-architecture\\loja-api.application\\profiles\\paymantprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|solutionrelative:loja-api.application\\profiles\\paymantprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|d:\\lojaapi-clean-architecture\\loja-api.application\\commands\\paymant\\createpaymantcommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|solutionrelative:loja-api.application\\commands\\paymant\\createpaymantcommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|d:\\lojaapi-clean-architecture\\loja-api.application\\mapper\\paymant\\paymantdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|solutionrelative:loja-api.application\\mapper\\paymant\\paymantdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|d:\\lojaapi-clean-architecture\\loja-api.application\\interfaces\\imercadopagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|solutionrelative:loja-api.application\\interfaces\\imercadopagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|d:\\lojaapi-clean-architecture\\loja-api.application\\services\\mercadopagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|solutionrelative:loja-api.application\\services\\mercadopagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|d:\\lojaapi-clean-architecture\\loja-api.application\\queries\\handlers\\paymant\\getallpaymenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{032AEFC0-DCC6-E6F0-2E91-D73FCB742E59}|loja-api.application\\loja-api.application.csproj|solutionrelative:loja-api.application\\queries\\handlers\\paymant\\getallpaymenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,118 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GetAllCupomHandler.cs",
-              "DocumentMoniker": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Queries\\Handlers\\Cupom\\GetAllCupomHandler.cs",
-              "RelativeDocumentMoniker": "loja-api.application\\Queries\\Handlers\\Cupom\\GetAllCupomHandler.cs",
-              "ToolTip": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Queries\\Handlers\\Cupom\\GetAllCupomHandler.cs",
-              "RelativeToolTip": "loja-api.application\\Queries\\Handlers\\Cupom\\GetAllCupomHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAMAAAAAAAAAA==",
+              "Title": "GetAllPaymantQuery.cs",
+              "DocumentMoniker": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Queries\\Paymant\\GetAllPaymantQuery.cs",
+              "RelativeDocumentMoniker": "loja-api.application\\Queries\\Paymant\\GetAllPaymantQuery.cs",
+              "ToolTip": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Queries\\Paymant\\GetAllPaymantQuery.cs",
+              "RelativeToolTip": "loja-api.application\\Queries\\Paymant\\GetAllPaymantQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T21:09:02.581Z",
+              "WhenOpened": "2025-05-30T21:55:46.443Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GetAllCupomQuery.cs",
-              "DocumentMoniker": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Queries\\Cupom\\GetAllCupomQuery.cs",
-              "RelativeDocumentMoniker": "loja-api.application\\Queries\\Cupom\\GetAllCupomQuery.cs",
-              "ToolTip": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Queries\\Cupom\\GetAllCupomQuery.cs",
-              "RelativeToolTip": "loja-api.application\\Queries\\Cupom\\GetAllCupomQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "GetAllPaymentHandler.cs",
+              "DocumentMoniker": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Queries\\Handlers\\Paymant\\GetAllPaymentHandler.cs",
+              "RelativeDocumentMoniker": "loja-api.application\\Queries\\Handlers\\Paymant\\GetAllPaymentHandler.cs",
+              "ToolTip": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Queries\\Handlers\\Paymant\\GetAllPaymentHandler.cs",
+              "RelativeToolTip": "loja-api.application\\Queries\\Handlers\\Paymant\\GetAllPaymentHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T21:08:48.753Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PaymantController.cs",
-              "DocumentMoniker": "D:\\LojaApi-Clean-Architecture\\loja-api.endpoints\\Controlers\\PaymantController.cs",
-              "RelativeDocumentMoniker": "loja-api.endpoints\\Controlers\\PaymantController.cs",
-              "ToolTip": "D:\\LojaApi-Clean-Architecture\\loja-api.endpoints\\Controlers\\PaymantController.cs",
-              "RelativeToolTip": "loja-api.endpoints\\Controlers\\PaymantController.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAUwF0AAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T21:01:20.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PaymantProfile.cs",
-              "DocumentMoniker": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Profiles\\PaymantProfile.cs",
-              "RelativeDocumentMoniker": "loja-api.application\\Profiles\\PaymantProfile.cs",
-              "ToolTip": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Profiles\\PaymantProfile.cs",
-              "RelativeToolTip": "loja-api.application\\Profiles\\PaymantProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T21:00:18.436Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CreatePaymantCommands.cs",
-              "DocumentMoniker": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Commands\\Paymant\\CreatePaymantCommands.cs",
-              "RelativeDocumentMoniker": "loja-api.application\\Commands\\Paymant\\CreatePaymantCommands.cs",
-              "ToolTip": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Commands\\Paymant\\CreatePaymantCommands.cs",
-              "RelativeToolTip": "loja-api.application\\Commands\\Paymant\\CreatePaymantCommands.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T21:00:03.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IMercadoPagoService.cs",
-              "DocumentMoniker": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Interfaces\\IMercadoPagoService.cs",
-              "RelativeDocumentMoniker": "loja-api.application\\Interfaces\\IMercadoPagoService.cs",
-              "ToolTip": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Interfaces\\IMercadoPagoService.cs",
-              "RelativeToolTip": "loja-api.application\\Interfaces\\IMercadoPagoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T20:45:24.438Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MercadoPagoService.cs",
-              "DocumentMoniker": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Services\\MercadoPagoService.cs",
-              "RelativeDocumentMoniker": "loja-api.application\\Services\\MercadoPagoService.cs",
-              "ToolTip": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Services\\MercadoPagoService.cs",
-              "RelativeToolTip": "loja-api.application\\Services\\MercadoPagoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T20:44:53.602Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreatePaymantHandler.cs",
-              "DocumentMoniker": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Commands\\Handlers\\Paymant\\CreatePaymantHandler.cs",
-              "RelativeDocumentMoniker": "loja-api.application\\Commands\\Handlers\\Paymant\\CreatePaymantHandler.cs",
-              "ToolTip": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Commands\\Handlers\\Paymant\\CreatePaymantHandler.cs",
-              "RelativeToolTip": "loja-api.application\\Commands\\Handlers\\Paymant\\CreatePaymantHandler.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAUwE8AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T20:25:36.964Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PaymantDTO.cs",
-              "DocumentMoniker": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Mapper\\Paymant\\PaymantDTO.cs",
-              "RelativeDocumentMoniker": "loja-api.application\\Mapper\\Paymant\\PaymantDTO.cs",
-              "ToolTip": "D:\\LojaApi-Clean-Architecture\\loja-api.application\\Mapper\\Paymant\\PaymantDTO.cs",
-              "RelativeToolTip": "loja-api.application\\Mapper\\Paymant\\PaymantDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T20:24:57.796Z",
+              "WhenOpened": "2025-05-30T21:54:11.007Z",
               "EditorCaption": ""
             }
           ]

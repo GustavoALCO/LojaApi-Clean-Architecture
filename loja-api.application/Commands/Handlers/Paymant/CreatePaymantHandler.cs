@@ -71,8 +71,8 @@ public class CreatePaymantHandler : IRequestHandler<CreatePaymantCommands, strin
         {
 
             var productData = await _products.GetProductsIDAsync(product.IdProducts);
-
-            paymant.Price += productData.Price;
+            
+            paymant.Price += productData.Price * product.Quantity;
         }
 
         if (request.CupomId != null)
@@ -91,17 +91,11 @@ public class CreatePaymantHandler : IRequestHandler<CreatePaymantCommands, strin
         //Cria um request para o mercadoPago criar uma preferencia para a compra do Usuario, e retorna um Corpo com as preferencias.
         var url = await _mercadoPagoService.CreatePaymantAsync(paymant, user);
 
-            //Recebe o Id das preferencias para Criar o pagamento no banco de dados
-            
-
             //Chama a interface para criar o pagamento no banco de dados
             await _commands.CreatePaymant(paymant);
 
             //Retorna o URL para o usuario efetuar o pagamento
-            return url.SandboxInitPoint.ToString();
-
-
-        
+            return url.SandboxInitPoint.ToString(); 
     
     }
 }

@@ -10,5 +10,5 @@ public class CreatePaymantCommands : IRequest<string>
 
     public Guid CupomId { get; set; }
 
-    public required List<ProductsPaymantDTO> ProductsMarket { get; set; }
+    public required List<ProductsPaymant> ProductsMarket { get; set; }
 }

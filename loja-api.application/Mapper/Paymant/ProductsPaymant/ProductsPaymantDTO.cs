@@ -1,6 +1,6 @@
 ﻿namespace loja_api.application.Mapper.Paymant.ProductsPaymant;
 
-public class ProductsPaymantDTO
+public class ProductsPaymant
 {
     public Guid IdProducts { get; set; }
 
