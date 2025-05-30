@@ -5,7 +5,7 @@ using MediatR;
 
 namespace loja_api.application.Commands.Handlers.Employee;
 
-public class LoginEmployeeHandler : IRequestHandler<GetLoginEmployeeCommands, string>
+public class LoginEmployeeHandler : IRequestHandler<PostLoginEmployeeCommands, string>
 {
     private readonly IEmployeeRepositoryQuery _query;
 
@@ -20,10 +20,8 @@ public class LoginEmployeeHandler : IRequestHandler<GetLoginEmployeeCommands, st
         _jwtService = jwtService;
     }
 
-    public async Task<string> Handle(GetLoginEmployeeCommands request, CancellationToken cancellationToken)
+    public async Task<string> Handle(PostLoginEmployeeCommands request, CancellationToken cancellationToken)
     {
-        try
-        {
             var employee = await _query.GetEmployeeLoginAsync(request.Login);
 
             if (employee == null)
@@ -35,11 +33,5 @@ public class LoginEmployeeHandler : IRequestHandler<GetLoginEmployeeCommands, st
                 throw new Exception("Senha Incorreta");
 
             return _jwtService.GerarTokenLogin(request.Login, employee.Position);
-
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.ToString());
-        }
     }
 }

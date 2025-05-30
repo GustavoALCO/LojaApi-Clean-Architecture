@@ -28,7 +28,7 @@ public class UpdateImageProductsHandlers : IRequestHandler<UpdateImageProductsCo
 
         await _imageService.DeleteImagesAsync(products.Images);
 
-        await _imageService.UploadBase64ImagesAsync(products.IdProducts, request.Images);
+        await _imageService.UploadBase64ImagesAsync(request.Images);
 
         return "Imagens Substituidas";
     }

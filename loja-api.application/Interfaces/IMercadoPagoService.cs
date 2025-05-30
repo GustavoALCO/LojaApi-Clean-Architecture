@@ -9,5 +9,4 @@ public interface IMercadoPagoService
 {
     Task<Preference> CreatePaymantAsync(Paymant PaymantDTO, User user);
 
-    Task<Preference> CreatePaymantSandBoxAsync(PaymantDTO PaymantDTO, UserDTO user);
 }

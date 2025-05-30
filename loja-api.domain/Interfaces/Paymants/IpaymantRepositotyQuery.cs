@@ -10,7 +10,7 @@ public interface IpaymantRepositotyQuery
 
     public Task<IEnumerable<Paymant>> BuscarCompraFiltro(IQueryable<Paymant> query, int page);
 
-    public Task<Paymant> BuscarCompra(string id);
+    public Task<Paymant> BuscarCompra(Guid id);
 
     public IQueryable<Paymant> GetQuery();
 }

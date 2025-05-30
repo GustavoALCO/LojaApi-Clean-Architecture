@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using loja_api.infra.Context;
 
@@ -11,9 +12,11 @@ using loja_api.infra.Context;
 namespace loja_api.infra.Migrations
 {
     [DbContext(typeof(ContextDB))]
-    partial class ContextDBModelSnapshot : ModelSnapshot
+    [Migration("20250530000426_v1")]
+    partial class v1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,7 +28,6 @@ namespace loja_api.infra.Migrations
             modelBuilder.Entity("loja_api.domain.Entities.Cupom", b =>
                 {
                     b.Property<Guid>("CupomId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Discount")
@@ -94,10 +96,6 @@ namespace loja_api.infra.Migrations
                         .HasColumnType("float");
 
                     b.HasKey("PaymantId");
-
-                    b.HasIndex("CupomId")
-                        .IsUnique()
-                        .HasFilter("[CupomId] IS NOT NULL");
 
                     b.HasIndex("IdUser");
 
@@ -234,6 +232,12 @@ namespace loja_api.infra.Migrations
 
             modelBuilder.Entity("loja_api.domain.Entities.Cupom", b =>
                 {
+                    b.HasOne("loja_api.domain.Entities.Paymant", null)
+                        .WithOne("Cupom")
+                        .HasForeignKey("loja_api.domain.Entities.Cupom", "CupomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.OwnsOne("loja_api.domain.Entities.auxiliar.Auditable", "Auditable", b1 =>
                         {
                             b1.Property<Guid>("CupomId")
@@ -296,10 +300,6 @@ namespace loja_api.infra.Migrations
 
             modelBuilder.Entity("loja_api.domain.Entities.Paymant", b =>
                 {
-                    b.HasOne("loja_api.domain.Entities.Cupom", "Cupom")
-                        .WithOne()
-                        .HasForeignKey("loja_api.domain.Entities.Paymant", "CupomId");
-
                     b.HasOne("loja_api.domain.Entities.User", "User")
                         .WithMany("Paymant")
                         .HasForeignKey("IdUser")
@@ -329,8 +329,6 @@ namespace loja_api.infra.Migrations
 
                     b.Navigation("AttDate")
                         .IsRequired();
-
-                    b.Navigation("Cupom");
 
                     b.Navigation("User");
                 });
@@ -426,6 +424,9 @@ namespace loja_api.infra.Migrations
 
             modelBuilder.Entity("loja_api.domain.Entities.Paymant", b =>
                 {
+                    b.Navigation("Cupom")
+                        .IsRequired();
+
                     b.Navigation("ProductsPaymant");
                 });
 

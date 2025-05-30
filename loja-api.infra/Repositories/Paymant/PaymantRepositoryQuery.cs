@@ -15,7 +15,7 @@ public class PaymantRepositoryQuery : IpaymantRepositotyQuery
 
     }
 
-    public async Task<domain.Entities.Paymant> BuscarCompra(string id)
+    public async Task<domain.Entities.Paymant> BuscarCompra(Guid id)
     {
         var Paymant = await _contextDB.Paymant.FirstOrDefaultAsync(x => x.PaymantId == id);
 

@@ -2,10 +2,10 @@
 
 namespace loja_api.application.Commands.Employee;
 
-public class GetLoginEmployeeCommands : IRequest<string>
+public class PostLoginEmployeeCommands : IRequest<string>
 {
-    public required string Login;
+    public string Login { get; set; }
 
-    public required string Password;
+    public string Password { get; set; }
 
 }

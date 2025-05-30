@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("loja-api.endpoints")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8f8841cb85047eca5d62fff125241c4e3cb568a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e18037744b21ffa8f6ffd4a721d09511bc2f736b")]
 [assembly: System.Reflection.AssemblyProductAttribute("loja-api.endpoints")]
 [assembly: System.Reflection.AssemblyTitleAttribute("loja-api.endpoints")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

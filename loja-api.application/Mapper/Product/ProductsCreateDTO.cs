@@ -4,7 +4,6 @@ namespace loja_api.application.Mapper.Product;
 
 public class ProductsCreateDTO
 {
-    public Guid IdProducts { get; set; }
 
     [Required]
     public string ProductName { get; set; }
@@ -23,7 +22,5 @@ public class ProductsCreateDTO
     public List<string> Images { get; set; }
 
     public int UserCreate {  get; set; }
-
-    public DateTime DateCreate { get; set; }
 
 }

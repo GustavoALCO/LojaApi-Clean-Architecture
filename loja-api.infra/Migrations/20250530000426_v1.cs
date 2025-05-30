@@ -12,25 +12,6 @@ namespace loja_api.infra.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Cupom",
-                columns: table => new
-                {
-                    CupomId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Discount = table.Column<int>(type: "int", nullable: false),
-                    Quantity = table.Column<int>(type: "int", nullable: false),
-                    IsValid = table.Column<bool>(type: "bit", nullable: false),
-                    Auditable_CreatebyId = table.Column<int>(type: "int", nullable: false),
-                    Auditable_CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Auditable_UpdatebyId = table.Column<int>(type: "int", nullable: false),
-                    Auditable_UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Cupom", x => x.CupomId);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Employee",
                 columns: table => new
                 {
@@ -122,9 +103,9 @@ namespace loja_api.infra.Migrations
                 name: "Paymant",
                 columns: table => new
                 {
-                    PaymantId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    PaymantId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdUser = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CupomId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CupomId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Price = table.Column<double>(type: "float", nullable: false),
                     AttDate_Assunto = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AttDate_Data = table.Column<string>(type: "nvarchar(max)", nullable: false)
@@ -132,12 +113,6 @@ namespace loja_api.infra.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Paymant", x => x.PaymantId);
-                    table.ForeignKey(
-                        name: "FK_Paymant_Cupom_CupomId",
-                        column: x => x.CupomId,
-                        principalTable: "Cupom",
-                        principalColumn: "CupomId",
-                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Paymant_Users_IdUser",
                         column: x => x.IdUser,
@@ -147,10 +122,35 @@ namespace loja_api.infra.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Cupom",
+                columns: table => new
+                {
+                    CupomId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Discount = table.Column<int>(type: "int", nullable: false),
+                    Quantity = table.Column<int>(type: "int", nullable: false),
+                    IsValid = table.Column<bool>(type: "bit", nullable: false),
+                    Auditable_CreatebyId = table.Column<int>(type: "int", nullable: false),
+                    Auditable_CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Auditable_UpdatebyId = table.Column<int>(type: "int", nullable: false),
+                    Auditable_UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Cupom", x => x.CupomId);
+                    table.ForeignKey(
+                        name: "FK_Cupom_Paymant_CupomId",
+                        column: x => x.CupomId,
+                        principalTable: "Paymant",
+                        principalColumn: "PaymantId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ProductsPaymant",
                 columns: table => new
                 {
-                    MarketCartId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    MarketCartId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdProducts = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     Price = table.Column<double>(type: "float", nullable: false)
@@ -173,12 +173,6 @@ namespace loja_api.infra.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Paymant_CupomId",
-                table: "Paymant",
-                column: "CupomId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Paymant_IdUser",
                 table: "Paymant",
                 column: "IdUser");
@@ -198,6 +192,9 @@ namespace loja_api.infra.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Cupom");
+
+            migrationBuilder.DropTable(
                 name: "Employee");
 
             migrationBuilder.DropTable(
@@ -211,9 +208,6 @@ namespace loja_api.infra.Migrations
 
             migrationBuilder.DropTable(
                 name: "Products");
-
-            migrationBuilder.DropTable(
-                name: "Cupom");
 
             migrationBuilder.DropTable(
                 name: "Users");

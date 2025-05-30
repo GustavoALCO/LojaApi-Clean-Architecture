@@ -20,13 +20,13 @@ public class ImageService : IImageService
 
     }
 
-    public async Task<List<string>> UploadBase64ImagesAsync(Guid ID, List<string> base64Images)
+    public async Task<List<string>> UploadBase64ImagesAsync(List<string> base64Images)
     {
         List<string> imageUrls = new List<string>();
 
         foreach (var base64Image in base64Images)
         {
-            var fileName = $"{ID.ToString()}&{Guid.NewGuid().ToString()}.jpg";
+            var fileName = $"{Guid.NewGuid().ToString()}.jpg";
             // Gera um nome único para a imagem
 
             var data = new Regex(@"^data:image\/[a-z]+;base64,").Replace(base64Image, "");

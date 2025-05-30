@@ -20,6 +20,11 @@ public class GetAllCupomHandler : IRequestHandler<GetAllCupomQuery, IEnumerable<
 
     public async Task<IEnumerable<CupomDTO>> Handle(GetAllCupomQuery request, CancellationToken cancellationToken)
     {
-        return _mapper.Map<IEnumerable<CupomDTO>>(await _query.GetAllCuponsValid(request.page));
+        int page = request.page;
+
+        if (page < 1)
+            page = 1;
+
+        return _mapper.Map<IEnumerable<CupomDTO>>(await _query.GetAllCuponsValid(page * 10));
     }
 }

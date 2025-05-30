@@ -30,7 +30,7 @@ public class UpdatePaymantHandler : IRequestHandler<UpdatePaymantCommands>
         string status = request.data.status;
 
         //Faz Uma chamada ao banco de dados para verificar se o Id passado pelo Json é valido 
-        var paymant = await _query.BuscarCompra(id);
+        var paymant = await _query.BuscarCompra(Guid.Parse(id));
 
         //Retorna Nulo se caso for nulo
         if (paymant == null)

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using loja_api.application.Commands.Employee;
+using loja_api.application.Interfaces;
 using loja_api.domain.Entities;
 using loja_api.domain.Interfaces.Employee;
 using MediatR;
@@ -14,21 +15,24 @@ public class CreateEmployeeHandlers : IRequestHandler<CreateEmployeeCommands>
 
     private readonly IMapper _mapper;
 
-    public CreateEmployeeHandlers(IEmployeeRepositoryQuery query, IEmployeeRepositoryCommands commands, IMapper mapper)
+    private readonly IHashService _hashService;
+
+    public CreateEmployeeHandlers(IEmployeeRepositoryQuery query, IEmployeeRepositoryCommands commands, IMapper mapper, IHashService hashService)
     {
         _query = query;
         _commands = commands;
         _mapper = mapper;
+        _hashService = hashService;
     }
 
     public async Task Handle(CreateEmployeeCommands request, CancellationToken cancellationToken)
     {
-        var employee = await _query.GetEmployeeLoginAsync(request.Login);
+        var employeeVerify = await _query.GetEmployeeLoginAsync(request.Login);
 
-        if (employee != null)
+        if (employeeVerify != null)
             throw new Exception("Usuario Com Login Existente");
 
-        await _commands.CreateEmployeeAsync(new domain.Entities.Employee
+         var employee = new domain.Entities.Employee
         {
             FullName = request.FullName,
             Login = request.Login,
@@ -40,7 +44,9 @@ public class CreateEmployeeHandlers : IRequestHandler<CreateEmployeeCommands>
                                                                  CreateDate = DateTime.Now
                                                                 }
 
-        });
+        };
+        employee.Password = _hashService.CreateHash(employee, request.Password);
 
+        await _commands.CreateEmployeeAsync(employee);
     }
 }

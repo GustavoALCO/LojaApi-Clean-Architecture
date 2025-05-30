@@ -26,12 +26,8 @@ public class CreateProductsHandler : IRequestHandler<CreateProductsCommands, boo
     {
         var product = _mapper.Map<Products>(request.productsCreateDTO);
 
-        if (request.productsCreateDTO.Images.Count() != 0)
-        {
-            //Transforma As string base64 em Strings da AzureStorage
-            product.Images = await _imageService.UploadBase64ImagesAsync(request.productsCreateDTO.IdProducts, request.productsCreateDTO.Images);
-
-        }
+        //Transforma As string base64 em Strings da AzureStorage
+        product.Images = await _imageService.UploadBase64ImagesAsync(product.Images);
 
         //Adiciona a data que foi o produto foi criado
         product.Auditable.CreateDate = DateTime.UtcNow;

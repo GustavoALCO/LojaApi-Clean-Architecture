@@ -12,8 +12,8 @@ using loja_api.infra.Context;
 namespace loja_api.infra.Migrations
 {
     [DbContext(typeof(ContextDB))]
-    [Migration("20250429141632_v1")]
-    partial class v1
+    [Migration("20250530012633_v2")]
+    partial class v2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -83,10 +83,11 @@ namespace loja_api.infra.Migrations
 
             modelBuilder.Entity("loja_api.domain.Entities.Paymant", b =>
                 {
-                    b.Property<string>("PaymantId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<Guid>("PaymantId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("CupomId")
+                    b.Property<Guid?>("CupomId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("IdUser")
@@ -98,7 +99,8 @@ namespace loja_api.infra.Migrations
                     b.HasKey("PaymantId");
 
                     b.HasIndex("CupomId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[CupomId] IS NOT NULL");
 
                     b.HasIndex("IdUser");
 
@@ -214,8 +216,8 @@ namespace loja_api.infra.Migrations
 
             modelBuilder.Entity("loja_api.domain.Entities.auxiliar.ProductsPaymant", b =>
                 {
-                    b.Property<string>("MarketCartId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<Guid>("MarketCartId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("IdProducts")
                         .HasColumnType("uniqueidentifier");
@@ -299,9 +301,7 @@ namespace loja_api.infra.Migrations
                 {
                     b.HasOne("loja_api.domain.Entities.Cupom", "Cupom")
                         .WithOne()
-                        .HasForeignKey("loja_api.domain.Entities.Paymant", "CupomId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("loja_api.domain.Entities.Paymant", "CupomId");
 
                     b.HasOne("loja_api.domain.Entities.User", "User")
                         .WithMany("Paymant")
@@ -311,8 +311,8 @@ namespace loja_api.infra.Migrations
 
                     b.OwnsOne("loja_api.domain.Entities.auxiliar.Attdata", "AttDate", b1 =>
                         {
-                            b1.Property<string>("PaymantId")
-                                .HasColumnType("nvarchar(450)");
+                            b1.Property<Guid>("PaymantId")
+                                .HasColumnType("uniqueidentifier");
 
                             b1.Property<string>("Assunto")
                                 .IsRequired()

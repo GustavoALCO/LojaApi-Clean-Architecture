@@ -6,5 +6,4 @@ public class ProductsPaymantDTO
 
     public int Quantity { get; set; }
 
-    public double Price { get; set; }
 }

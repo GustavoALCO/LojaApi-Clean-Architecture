@@ -21,7 +21,7 @@ public class GetIdPaymentHandler : IRequestHandler<GetIdPaymantQuery, PaymantDTO
 
     public async Task<PaymantDTO> Handle(GetIdPaymantQuery request, CancellationToken cancellationToken)
     {
-        var paymant = _mapper.Map<PaymantDTO>(await _query.BuscarCompra(request.Id));
+        var paymant = _mapper.Map<PaymantDTO>(await _query.BuscarCompra(Guid.Parse(request.Id)));
 
         return paymant;
     }

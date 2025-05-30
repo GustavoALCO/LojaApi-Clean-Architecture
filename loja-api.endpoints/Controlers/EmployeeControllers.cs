@@ -60,4 +60,15 @@ public class EmployeeControllers : ControllerBase
 
         return Ok();
     }
+
+    [HttpPost("LoginEmployee")]
+    public async Task<IActionResult> LoginEmployee([FromBody] PostLoginEmployeeCommands postLoginEmployeeCommands)
+    {
+        var response = await _mediator.Send(postLoginEmployeeCommands);
+
+        if (response == null)
+            return NotFound("Funcionario nao encontrado");
+
+        return Ok(response);
+    }
 }

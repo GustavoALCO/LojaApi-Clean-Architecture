@@ -2,7 +2,7 @@
 
 public class ProductsPaymant
 {
-    public string MarketCartId { get; set; }
+    public Guid MarketCartId { get; set; }
 
     public Guid IdProducts { get; set; }
 

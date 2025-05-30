@@ -15,7 +15,6 @@ public class ProductsProfile : Profile
         CreateMap<Products, ProductsFilterDTO>().ReverseMap();
 
         CreateMap<Products, ProductsCreateDTO>()
-            .ForMember(dest => dest.DateCreate, opt => opt.MapFrom(src => src.Auditable.CreateDate))
             .ForMember(dest => dest.UserCreate, opt => opt.MapFrom(src => src.Auditable.CreatebyId))
             .ReverseMap();
 

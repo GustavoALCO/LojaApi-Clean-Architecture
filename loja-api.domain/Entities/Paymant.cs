@@ -6,11 +6,11 @@ namespace loja_api.domain.Entities;
 public class Paymant
 {
     [Key]
-    public string PaymantId { get; set; }
+    public Guid PaymantId { get; set; }
 
     public Guid IdUser { get; set; }
 
-    public Guid CupomId { get; set; }
+    public Guid? CupomId { get; set; }
 
     public List<ProductsPaymant> ProductsPaymant { get; set; }
 

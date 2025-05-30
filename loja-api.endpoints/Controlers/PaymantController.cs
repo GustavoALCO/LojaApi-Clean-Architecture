@@ -87,13 +87,13 @@ public class PaymantController : ControllerBase
     [Authorize]
     [HttpPost("CreatePaymant")]
     public async Task<IActionResult> CreatePayment([FromBody]
-                                                    PaymantDTO paymantDTO)
+                                                    CreatePaymantCommands createPaymant)
     {
         try
         {
-            await _mediator.Send(new CreatePaymantCommands { PaymantDTO = paymantDTO });
+            var response = await _mediator.Send(createPaymant);
 
-            return Ok();
+            return Ok(response);
         }
         catch (Exception ex)
         {
